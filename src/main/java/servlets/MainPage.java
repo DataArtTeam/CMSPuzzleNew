@@ -21,7 +21,6 @@ public class MainPage extends ServletProvider{
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         response.setContentType(CONTENT_TYPE);
         super.forwardRequest(request, response, pageName);
     }
