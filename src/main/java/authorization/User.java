@@ -1,14 +1,14 @@
 package authorization;
 
 
-import access.Role;
+import access.UserRole;
 
 public class User {
 
     String userName;
-    Role role;
+    UserRole role;
 
-    public User(String userName, Role role){
+    public User(String userName, UserRole role){
         this.userName = userName;
         this.role = role;
     }
@@ -17,7 +17,7 @@ public class User {
         return userName;
     }
 
-    public Role getRole(){
+    public UserRole getRole(){
        return role;
     }
 
