@@ -6,7 +6,7 @@ import authorization.User;
 public class AccessProvider {
 
     public AccessLevel getUserAccess(User user){
-        Role userRole = user.getRole();
+        UserRole userRole = user.getRole();
         AccessLevel accessLevel;
         switch (userRole){
             case USER:

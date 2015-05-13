@@ -1,6 +1,6 @@
 package access;
 
-public enum Role {
+public enum UserRole {
     USER,
     ADMINISTRATOR,
     AUTHOR,

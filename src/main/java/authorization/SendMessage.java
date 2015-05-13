@@ -7,58 +7,50 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.Multipart;
 import javax.mail.Authenticator;
+import javax.mail.PasswordAuthentication;
 import javax.mail.internet.*;
 
 public class SendMessage {
-	private static String email = "team_puzzle@mail.ua";
-	private static String password = "puzart6$2015";
-	private static String host = "smtp.mail.ru";
-	private static String port = "465";
-
-	public void sendMessage(String[] recipients, String subject, String text)
+	public void sendMessage(String toWho, String subject, String message)
 			throws MessagingException {
-
 		Properties mailProps = new Properties();
-		mailProps.put("mail.smtp.host", host);
-		mailProps.put("mail.smtp.port", port);
-		mailProps.put("mail.smtp.user", email);
-		mailProps.put("mail.smtp.password", password);
-		mailProps.put("mail.smtp.starttls.enable", "true");
+		mailProps.put("mail.smtp.host", "smtp.mail.ru");
+		mailProps.put("username", "team_puzzle@mail.ua");
+		mailProps.put("password", "puzart6$2015");
+		mailProps.put("mail.smtp.port",465);
 		mailProps.put("mail.smtp.auth", "true");
-		// mailProps.put("mail.smtp.debug", "true");
-		mailProps.put("mail.smtp.socketFactory.port", port);
-		mailProps.put("mail.smtp.socketFactory.class",
-				"javax.net.ssl.SSLSocketFactory");
-		mailProps.put("mail.smtp.socketFactory.fallback", "false");
-		Authenticator auth = new SMTPAuthenticator(email, password);
-		Session mailSession = Session.getDefaultInstance(mailProps, auth);
-
+		
+//		mailProps.setProperty("mail.transport.protocol", "smtp");
+//		mailProps.setProperty("mail.smtp.host", "mail.ca.extmedia.com");
+//		mailProps.setProperty("mail.user", "@");
+//		mailProps.setProperty("mail.password", "pass");
+		
+		Session mailSession = Session.getDefaultInstance(mailProps,
+				new Authenticator() {
+					protected PasswordAuthentication getPasswordAuthentication() {
+						String myEmail = "team_puzzle@mail.ua";
+						String passwordMail = "puzart6$2015";
+						return (new PasswordAuthentication(myEmail,
+								passwordMail));
+					}
+				});
 		MimeMessage mimeMessage = new MimeMessage(mailSession);
-		String[] emails = recipients; // адреса получателей
+		mimeMessage.setFrom(new InternetAddress("email"));
+		String[] emails = { toWho, "Diesel31ks@mail.ru" };
 		InternetAddress dests[] = new InternetAddress[emails.length];
 		for (int i = 0; i < emails.length; i++) {
 			dests[i] = new InternetAddress(emails[i].trim().toLowerCase());
 		}
 		mimeMessage.setRecipients(Message.RecipientType.TO, dests);
-		mimeMessage.setSubject(subject, "KOI8-R");
-
-		Multipart multipart = new MimeMultipart();
+		mimeMessage.setSubject("", "KOI8-R");
+		Multipart mp = new MimeMultipart();
 		MimeBodyPart mbp1 = new MimeBodyPart();
-		mbp1.setText(text, "KOI8-R");
-		multipart.addBodyPart(mbp1);
-
-		mimeMessage.setFrom(email);
-		mimeMessage.setContent(multipart);
+		mbp1.setText(
+				" CMSPuzzle-1.0-SNAPSHOT. <a href=\"/CMSPuzzle-1.0-SNAPSHOT/login.jsp\" >Log in</a>",
+				"KOI8-R");
+		mp.addBodyPart(mbp1);
+		mimeMessage.setContent(mp);
 		mimeMessage.setSentDate(new java.util.Date());
-
 		Transport.send(mimeMessage);
-
 	}
-	// public class SMTPAuthenticator extends Authenticator{
-	// @Override
-	// protected PasswordAuthentication getPasswordAuthentication() {
-	// return new PasswordAuthentication(email, password);
-	// }
-	//
-	// }
 }
