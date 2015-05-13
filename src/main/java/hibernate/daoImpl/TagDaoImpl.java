@@ -11,7 +11,6 @@ import hibernate.util.HibernateUtil;
 
 public class TagDaoImpl implements TagDao {
 
-	@Override
 	public void addTag(Tag tag) throws SQLException {
 		Session session = null;
 		try {
@@ -26,7 +25,6 @@ public class TagDaoImpl implements TagDao {
 		}
 	}
 
-	@Override
 	public Tag getTag(int id) throws SQLException {
 		Session session = null;
 		Tag tag = null;
@@ -43,7 +41,6 @@ public class TagDaoImpl implements TagDao {
 		return tag;
 	}
 
-	@Override
 	public List<Tag> getTags() throws SQLException {
 		Session session = null;
 		List<Tag> tags = null;
@@ -60,7 +57,6 @@ public class TagDaoImpl implements TagDao {
 		return tags;
 	}
 
-	@Override
 	public void deleteTag(Tag tag) throws SQLException {
 		Session session = null;
 		try {

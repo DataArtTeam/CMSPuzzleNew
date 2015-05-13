@@ -9,7 +9,6 @@ import hibernate.util.HibernateUtil;
 
 public class ContentDaoImpl implements ContentDao {
 
-	@Override
 	public void addContent(Content content) throws SQLException {
 		Session session = null;
 		try {
@@ -24,7 +23,6 @@ public class ContentDaoImpl implements ContentDao {
 		}
 	}
 
-	@Override
 	public Content getContent(int id) throws SQLException {
 		Session session = null;
 		Content content = null;
@@ -41,7 +39,6 @@ public class ContentDaoImpl implements ContentDao {
 		return content;
 	}
 
-	@Override
 	public List<Content> getContents() throws SQLException {
 		Session session = null;
 		List<Content> contents = null;
@@ -58,7 +55,6 @@ public class ContentDaoImpl implements ContentDao {
 		return contents;
 	}
 
-	@Override
 	public void deleteContent(Content content) throws SQLException {
 		Session session = null;
 		try {

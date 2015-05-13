@@ -2,6 +2,7 @@ package hibernate.general;
 
 import java.sql.SQLException;
 
+import access.UserRole;
 import hibernate.dao.ContentTagLinkerDao;
 import hibernate.dao.FrontPageDao;
 import hibernate.tables.Content;
@@ -30,7 +31,7 @@ public class Example {
 		user.setLastName("Pupkin");
 		user.setLogin("vas");
 		user.setPassword("vas");
-		user.setRole(1);
+		user.setRole(UserRole.USER);
 		factory.getUserDao().addUser(user);
 		content.setAuthor(user);
 		content.setText("some text");

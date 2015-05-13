@@ -11,7 +11,6 @@ import hibernate.util.HibernateUtil;
 
 public class FrontPageDaoImpl implements FrontPageDao {
 
-	@Override
 	public void addFrontPageContent(FrontPage frontPage) throws SQLException {
 		Session session = null;
 		try {
@@ -26,7 +25,6 @@ public class FrontPageDaoImpl implements FrontPageDao {
 		}
 	}
 
-	@Override
 	public FrontPage getFrontPageContent(int id) throws SQLException {
 		Session session = null;
 		FrontPage frontPage = null;
@@ -43,7 +41,6 @@ public class FrontPageDaoImpl implements FrontPageDao {
 		return frontPage;
 	}
 
-	@Override
 	public List<FrontPage> getFrontPageContents() throws SQLException {
 		Session session = null;
 		List<FrontPage> contents = null;
@@ -60,7 +57,6 @@ public class FrontPageDaoImpl implements FrontPageDao {
 		return contents;
 	}
 
-	@Override
 	public void deleteFrontPageContent(FrontPage frontPage) throws SQLException {
 		Session session = null;
 		try {

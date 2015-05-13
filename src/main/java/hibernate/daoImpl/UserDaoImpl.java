@@ -11,7 +11,6 @@ import hibernate.util.HibernateUtil;
 
 public class UserDaoImpl implements UserDao{
 
-	@Override
 	public void addUser(User user) throws SQLException {
 		Session session = null;
 		try {
@@ -26,7 +25,6 @@ public class UserDaoImpl implements UserDao{
 		}
 	}
 
-	@Override
 	public User getUser(int id) throws SQLException {
 		Session session = null;
 		User user = null;
@@ -43,7 +41,6 @@ public class UserDaoImpl implements UserDao{
 		return user;
 	}
 
-	@Override
 	public List<User> getUsers() throws SQLException {
 		Session session = null;
 		List<User> users = null;
@@ -61,7 +58,6 @@ public class UserDaoImpl implements UserDao{
 	}
 
 
-	@Override
 	public void deleteUser(User user) throws SQLException {
 		Session session = null;
 		try {

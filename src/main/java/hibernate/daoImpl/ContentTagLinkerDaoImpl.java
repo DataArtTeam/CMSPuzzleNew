@@ -12,7 +12,6 @@ import hibernate.util.HibernateUtil;
 
 public class ContentTagLinkerDaoImpl implements ContentTagLinkerDao {
 
-	@Override
 	public void addLink(ContentTagLinker contentTagLinker) throws SQLException {
 		Session session = null;
 		try {
@@ -28,7 +27,6 @@ public class ContentTagLinkerDaoImpl implements ContentTagLinkerDao {
 
 	}
 
-	@Override
 	public ContentTagLinker getLink(int id) throws SQLException {
 		Session session = null;
 		ContentTagLinker contentTagLinker = null;
@@ -45,7 +43,6 @@ public class ContentTagLinkerDaoImpl implements ContentTagLinkerDao {
 		return contentTagLinker;
 	}
 
-	@Override
 	public List<ContentTagLinker> getLinks() throws SQLException {
 		Session session = null;
 		List<ContentTagLinker> contentTagLinkers= null;
@@ -62,7 +59,6 @@ public class ContentTagLinkerDaoImpl implements ContentTagLinkerDao {
 		return contentTagLinkers;
 	}
 
-	@Override
 	public void deleteLink(ContentTagLinker contentTagLinker) throws SQLException {
 		Session session = null;
 		try {
