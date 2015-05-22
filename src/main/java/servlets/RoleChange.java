@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 
 @WebServlet("/role")
@@ -28,7 +27,7 @@ public class RoleChange extends HttpServlet {
         roleList.add("AUTHOR");
         roleList.add("CORRECTOR");
         roleList.add("EDITOR");
-        req.setAttribute("role", roleList/*Arrays.toString(Role.values())*/);
+        req.setAttribute("role", roleList);
 
         req.getRequestDispatcher(page).forward(req, resp);
 

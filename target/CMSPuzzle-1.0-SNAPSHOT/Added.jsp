@@ -24,10 +24,10 @@
       itr=data.iterator();
     %>
     <option selected="selected" value="<%=itr%>"><%=itr.next()%></option>
-    <option value="<%=itr%>"><%=itr.next()%></option>"
-    <option value="<%=itr%>"><%=itr.next()%></option>
-    <option value="<%=itr%>"><%=itr.next()%></option>
-    <option value="<%=itr%>"><%=itr.next()%></option>
+    <%for (;itr.hasNext();){
+      out.println("<option value=\"" + itr + "\">"+ itr.next()+"</option>\"");
+    }%>
+
   </select>
   <BR><BR>
   <INPUT type="submit" name="submit" value="Confirm"><BR>
@@ -52,9 +52,9 @@
   <% if(!flagStart){ %>
   <%  s_name=request.getParameter("name");
   %><%
-                  s_email=request.getParameter("email");
-                  s_role=request.getParameter("menu");
-                  change_date=" "+new Date(); %>
+  s_email=request.getParameter("email");
+  s_role=request.getParameter("menu");
+  change_date=" "+new Date(); %>
 
   <% out.println("<tr>");
     out.println("<td>" + s_name + "</td>");
