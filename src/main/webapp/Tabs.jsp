@@ -113,7 +113,7 @@
 </div>
 <section id="Materials" class="tab-content active">
     <div>
-        <%@ include file="/mainPage.jsp" %>
+        <%@ include file="/MainPage.jsp" %>
     </div>
 </section>
 <section id="Users" class="tab-content hide">

@@ -13,7 +13,7 @@ import java.io.IOException;
 public class LoginServlet extends ServletProvider {
 
     private static final String CONTENT_TYPE = "text/html";
-    private static final String PAGE_NAME = "/loginPage.jsp";
+    private static final String PAGE_NAME = "/LoginPage.jsp";
     private static final String KEY_USERNAME = "user";
     private static final String KEY_PASSWORD = "password";
     private String userName;
@@ -28,7 +28,6 @@ public class LoginServlet extends ServletProvider {
         if(!userIsInDB){
 
         }
-
         response.setContentType(CONTENT_TYPE);
         super.forwardRequest(request, response, PAGE_NAME);
     }

@@ -25,4 +25,9 @@ public class User {
         //TODO make normal
         return "123";
     }
+
+    public String getUsername(){
+        return userName;
+    }
+
 }

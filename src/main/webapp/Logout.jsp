@@ -7,7 +7,7 @@
 <body>
 
     <br>
-    <form action="loginPage.jsp" method="post">
+    <form action="LoginPage.jsp" method="post">
         <input type="submit" value="LOGOUT" />
     </form>
     <br>
