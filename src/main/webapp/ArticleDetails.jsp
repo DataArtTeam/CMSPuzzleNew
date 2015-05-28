@@ -15,24 +15,21 @@
 
 <h1>Edit Article</h1>
 
-<form action="assets/sample_posteddata.jsp" method="post">
+<p>
+    <%
+        String value = "";
+        Map<String, String> attr = new HashMap<String, String>();
+        attr.put("rows", "8");
+        attr.put("cols", "50");
+        CKEditorConfig settings = new CKEditorConfig();
+        settings.addConfigValue("width", "500");
+        settings.addConfigValue("toolbar", "Full");
+    %>
+    <ckeditor:editor textareaAttributes="<%=attr %>" basePath="../ckeditor/" config="<%=settings %>"
+                     editor="editor1" value="<%= value %>"/>
+    <input type="submit" value="Submit"/>
+</p>
 
-    <p>
-        <%
-            String value = "";
-            Map<String, String> attr = new HashMap<String, String>();
-            attr.put("rows", "8");
-            attr.put("cols", "50");
-            CKEditorConfig settings = new CKEditorConfig();
-            settings.addConfigValue("width", "500");
-            settings.addConfigValue("toolbar", "Basic");
-        %>
-        <ckeditor:editor textareaAttributes="<%=attr %>"
-                         basePath="../ckeditor/" config="<%=settings %>"
-                         editor="editor1" value="<%= value %>"/>
-        <input type="submit" value="Submit"/>
-    </p>
-</form>
 
 </body>
 </html>

@@ -27,8 +27,5 @@ public class MainPage extends ServletProvider{
 
     private void fillArticleTable(){
         //TODO access level
-        ArrayList<Article> articles = ArticleList.getArticleList();
-
-
     }
 }
