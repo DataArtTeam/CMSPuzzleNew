@@ -2,19 +2,24 @@
 <html>
 <head>
     <title>Puzzle CMS</title></head>
-<body>
+<style>
+    button {
+        background: #E6E6FA;
+        border: 1px solid #7a7b7e;
+        width: 120px;
+        height: 30px;
+        border-radius: 5px;
+    }
 
-</form><H1>Materials</H1>
+</style>
 
+<body bgcolor="#FFFFF0">
 
 <form action="ArticleDetails.jsp" method="post">
-    <input type="submit" value="ADD NEW" />
+    <button><b>Add new article</b></button>
 </form>
-
-<form action="loginPage.jsp" method="post">
-    <input type="submit" value="DELETE" />
-</form>
-
+<button><b>Delete articles</b></button>
+<BR> <BR>
 
 <table style="border: 1px solid; width: 100%; text-align:center">
     <thead style="background:#d3dce3">

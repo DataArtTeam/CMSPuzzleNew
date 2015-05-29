@@ -8,31 +8,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Puzzle CMS | Article</title>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-    <link type="text/css" rel="stylesheet" href="../ckeditor/_samples/sample.css" />
+    <style>
+        button {
+            background: #E6E6FA;
+            border: 1px solid #7a7b7e;
+            width: 120px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        header {
+            display: block;
+            height: 50px;
+            background: #eee5de;
+        }
+        .header-cms {
+            background: #eee5de
+        height: 50px;
+            text-align: start;
+        }
+    </style>
 </head>
-<body>
 
-<h1>Edit Article</h1>
+<body bgcolor="#FFFFF0">
 
-<form action="assets/sample_posteddata.jsp" method="post">
+<header>
+    <div class="header-cms">
+        <H1>Editing article</H1>
+    </div>
+</header>
 
-    <p>
-        <%
-            String value = "";
-            Map<String, String> attr = new HashMap<String, String>();
-            attr.put("rows", "8");
-            attr.put("cols", "50");
-            CKEditorConfig settings = new CKEditorConfig();
-            settings.addConfigValue("width", "500");
-            settings.addConfigValue("toolbar", "Basic");
-        %>
-        <ckeditor:editor textareaAttributes="<%=attr %>"
-                         basePath="../ckeditor/" config="<%=settings %>"
-                         editor="editor1" value="<%= value %>"/>
-        <input type="submit" value="Submit"/>
-    </p>
-</form>
+<br/>Name*: <input type="text" name="name" value="" size=40 maxlength=100/><br/>
+<br/>Title*: <input type="text" name="title" value="" size=40 maxlength=100/><br/>
 
+<div align="center">
+    <form>
+        <p>
+            <%
+                String value = "";
+                Map<String, String> attr = new HashMap<String, String>();
+                attr.put("rows", "8");
+                attr.put("cols", "50");
+                CKEditorConfig settings = new CKEditorConfig();
+                settings.addConfigValue("toolbar", "Full");
+            %>
+            <ckeditor:editor textareaAttributes="<%=attr %>"
+                             basePath="../ckeditor/" config="<%=settings %>"
+                             editor="editor1" value="<%= value %>"/>
+            <br> <br>
+        </p>
+    </form>
+</div>
+
+<br/>Keywords*: <input type="text" name="keywords" value="" size=100 maxlength=100/><br/>
+<br/>Description*: <input type="text" name="description" value="" size=100 maxlength=255/><br/>
+<br/>
+<button><b>Submit</b></button>
 </body>
 </html>
