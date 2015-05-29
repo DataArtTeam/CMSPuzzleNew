@@ -10,7 +10,7 @@
 
 <table>
     <tr>
-        <form action="tabs.jsp" method="post">
+        <form action="Tabs.jsp" method="post">
             <table>
                 <tr>
                     <td> User : </td><td> <input name="username" size=15 type="text" /> </td>

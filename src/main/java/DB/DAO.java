@@ -4,13 +4,21 @@ import java.util.ArrayList;
 
 import access.AccessLevel;
 import access.Role;
+import authorization.User;
 import context.Article;
 
-public abstract class DAO {
+public class DAO {
 
-   public abstract ArrayList<Article> getArticles(AccessLevel accessLevel);
+   public ArrayList<Article> getArticles(AccessLevel accessLevel){
+       ArrayList<Article> articleList = new ArrayList<Article>();
+       User user = new User("usr1", Role.ADMINISTRATOR);
+       Article article = new Article(user, "Some title", "Some desc");
+       Article article1 = new Article(user, "Some title fv", "Some desc fv");
+       articleList.add(article);
+       articleList.add(article1);
 
-    public abstract Role getRole();
+       return articleList;
+   }
 
 
 }

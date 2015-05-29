@@ -96,11 +96,27 @@
         .tab-content.hide{
             display: none;
         }
-      /** End: to style navigation tab **/
+        header {
+            display: block;
+            height: 50px;
+            background: #eee5de;
+        }
+        .header-cms {
+            background: #eee5de
+        height: 50px;
+            text-align: start;
+        }
     </style>
+
 </head>
 <body>
-<%@ include file="/Logout.jsp" %>
+<header>
+    <div class="header-cms">
+        <H1>Puzzle CMS</H1>
+        <%@ include file="/Logout.jsp" %>
+    </div>
+</header>
+
 <div>
     <ul class="nav nav-tabs">
         <li class="active">

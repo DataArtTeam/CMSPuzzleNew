@@ -177,4 +177,5 @@ public class Article implements ContextObject{
         return articleList.getSimilarArticles(id);
     }
 
+
 }

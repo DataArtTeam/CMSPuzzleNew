@@ -8,10 +8,10 @@ import org.json.JSONObject;
 
 public class User implements ContextObject {
 
-    private String userName;
-    private Role role;
-    private String firstName;
-    private String lastName;
+    String userName;
+    Role role;
+    String firstName;
+    String lastName;
 
     private static final String KEY_NAME = "name";
     private static final String KEY_FIRST_NAME = "firstname";
@@ -62,7 +62,23 @@ public class User implements ContextObject {
         return userInJSON;
     }
 
-    private void getUserFromBD(){
+    private void getUserFromBD() {
+
+    }
+
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public String getLastName(){
+        return lastName;
+    }
+
+    public String getUsername(){
+        return userName;
+    }
+
+    public void setStatus(UserStatus userStatus){
 
     }
 }
