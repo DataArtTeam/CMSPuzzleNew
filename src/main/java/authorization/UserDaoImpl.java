@@ -10,7 +10,7 @@ public class UserDaoImpl implements UserDao {
 
     public ArrayList<User> getUsersByProperty(String name, String value){
 
-        User user = new User ("user1", Role.AUTHOR);
+        User user = new User ("user1", Role.AUTHOR, "Mary", "Illy");
         ArrayList<User> userList = new ArrayList<User>();
         userList.add(user);
         return userList;

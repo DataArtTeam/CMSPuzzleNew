@@ -46,7 +46,7 @@
         <th><input type="checkbox" name="id" value="select"></th>
         <th><a href=ArticleDetails.jsp><% out.print(article.getTitle());%></a></th>
         <th><% out.print(article.getDescription());%></th>
-        <th><% out.print(article.author.getUsername());%></th>
+        <th><% out.print(article.author.getName());%></th>
         <th><a href=ArticleDetails.jsp> show history</a></th>
         <th><a href=ArticleDetails.jsp> finish working with article</a></th>
     </tr>

@@ -31,7 +31,7 @@ public class Article implements ContextObject{
     private String url;
     private int review;
     private ArrayList<Tag> tags;
-    private User author;
+    public User author;
     private String text;
     private String title;
     private String kwds;
@@ -175,6 +175,14 @@ public class Article implements ContextObject{
     private ArrayList<JSONObject> getSimilarArticles(){
         ArticleList articleList = new ArticleList();
         return articleList.getSimilarArticles(id);
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public String getDescription(){
+        return description;
     }
 
 

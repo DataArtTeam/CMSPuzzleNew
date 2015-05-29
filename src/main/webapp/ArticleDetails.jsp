@@ -41,20 +41,26 @@
 <br/>Title*: <input type="text" name="title" value="" size=40 maxlength=100/><br/>
 
 <div align="center">
-    <form>
+    <form action="assets/sample_posteddata.jsp" method="post">
+        <p>
+            <label for="editor1">
+                Editor 1:</label>
+            <textarea cols="80" id="editor1" name="editor1" rows="10"></textarea>
+        </p>
         <p>
             <%
-                String value = "";
+                String value = "My first <strong>CKEditor</strong> Java tag";
                 Map<String, String> attr = new HashMap<String, String>();
                 attr.put("rows", "8");
                 attr.put("cols", "50");
                 CKEditorConfig settings = new CKEditorConfig();
-                settings.addConfigValue("toolbar", "Full");
+                settings.addConfigValue("width", "500");
+                settings.addConfigValue("toolbar", "Basic");
             %>
             <ckeditor:editor textareaAttributes="<%=attr %>"
                              basePath="../ckeditor/" config="<%=settings %>"
                              editor="editor1" value="<%= value %>"/>
-            <br> <br>
+            <input type="submit" value="Submit"/>
         </p>
     </form>
 </div>
