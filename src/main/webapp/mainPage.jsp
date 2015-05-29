@@ -23,30 +23,32 @@
 <form action="ArticleDetails.jsp" method="post">
     <button><b>Add new article</b></button>
 </form>
-
-<button><b>Delete articles</b></button>
 <BR> <BR>
 
 <table style="border: 1px solid; width: 100%; text-align:center">
-    <thead style="background:#00796B">
+    <thead style="background:#dbc1ac">
     <tr>
         <th>Select</th>
         <th>Title</th>
         <th>Preview</th>
         <th>Author</th>
+        <th>History</th>
+        <th>Next step</th>
     </tr>
     </thead>
 
-    <tbody style="background:#B2DFDB">
+    <tbody style="background:#e7ddbe">
 
     <% ArrayList<Article> articleList= (ArrayList) session.getAttribute("articleList");
         for(Article article: articleList) {%>
 
     <tr>
         <th><input type="checkbox" name="id" value="select"></th>
-        <th><% out.print(article.getTitle());%></th>
+        <th><a href=ArticleDetails.jsp><% out.print(article.getTitle());%></a></th>
         <th><% out.print(article.getDescription());%></th>
         <th><% out.print(article.author.getUsername());%></th>
+        <th><a href=ArticleDetails.jsp> show history</a></th>
+        <th><a href=ArticleDetails.jsp> finish working with article</a></th>
     </tr>
 
     <%}%>

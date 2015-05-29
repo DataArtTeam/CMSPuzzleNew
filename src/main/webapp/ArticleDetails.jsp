@@ -37,7 +37,7 @@
     </div>
 </header>
 
-<br/>Name*: <input type="text" name="name" value="" size=40 maxlength=100/><br/>
+<br/>Name*: <input type="text" name="name" value="" size=40 maxlength=100 enctype="multipart/form-data"/><br/>
 <br/>Title*: <input type="text" name="title" value="" size=40 maxlength=100/><br/>
 
 <div align="center">
@@ -62,6 +62,18 @@
 <br/>Keywords*: <input type="text" name="keywords" value="" size=100 maxlength=100/><br/>
 <br/>Description*: <input type="text" name="description" value="" size=100 maxlength=255/><br/>
 <br/>
-<button><b>Submit</b></button>
+
+<div align="left">
+    <form action="/validateArticle" method="get">
+        <button><b>Submit</b></button>
+    </form>
+</div>
+
+<div align="right">
+    <form action="Tabs.jsp" method="get">
+        <button><b>Close</b></button>
+    </form>
+</div>
+
 </body>
 </html>
