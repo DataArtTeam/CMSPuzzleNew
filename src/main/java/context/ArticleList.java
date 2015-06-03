@@ -9,7 +9,16 @@ import java.util.ArrayList;
 
 public class ArticleList {
 
-    public String getArticlesInString(){
+    private static ArticleList articleList;
+
+    Article article;
+    Article article1;
+    public ArrayList<Article> list;
+
+    private ArticleList(){
+
+        list = new ArrayList<Article>();
+
         //TODO: find by id
         ArrayList<Tag> tags1 = new ArrayList<Tag>();
         Tag forestTag = new Tag(1, "forest");
@@ -19,7 +28,7 @@ public class ArticleList {
         User user = new User("Victor", Role.AUTHOR, "Victor", "Pypkin");
         String text = "Recently, a lot of trees are cut down. Environmentalists are sounding the alarm. Our world is in danger.";
 
-        Article article = new Article(1, "threat to forests" , "how many trees left in the world",
+        article = new Article(1, "threat to forests" , "how many trees left in the world",
                 "1432339200", "test", tags1, user, text, "Our planet is in danger", "threat to forests", "testImg.png", 14,
                 "forest, tree", 1);
 
@@ -38,14 +47,29 @@ public class ArticleList {
                 "They are considered the best in the world. " +
                 "The mass pilgrimage begins in the summer and ditsya until mid autumn.";
 
-        Article article1 = new Article(1, "new side of Provence" , "that every man should see, coming to France",
+        article1 = new Article(2, "new side of Provence" , "that every man should see, coming to France",
                 "1432339200", "test", tags2, user1, text1, "the magic of Provence", "the magic of Provence", "Provence.png", 14,
                 "France, Provence", 1);
 
+        list.add(article);
+        list.add(article1);
+
+    }
+    public static ArticleList getArticleList(){
+        if (articleList == null){
+            return new ArticleList();
+        }
+        return articleList;
+    }
+
+    public String getArticlesInString(){
+
+
         StringBuffer articleString = new StringBuffer();
         articleString.append("[");
-        articleString.append(article.getStringJSON());
-        articleString.append(article1.getStringJSON());
+        for(Article articles: list){
+            articleString.append(articles.getStringJSON());
+        }
         articleString.append("]");
         return articleString.toString();
     }
@@ -76,6 +100,19 @@ public class ArticleList {
         articles.add(article3);
 
         return articles;
+    }
+
+    public Article getArticleByID(String id){
+        Integer idInt = new Integer(id);
+        if (idInt == 1){
+            return article;
+        }
+        else if (idInt == 2){
+            return article1;
+        }
+        else {
+            return null;
+        }
     }
 
 }

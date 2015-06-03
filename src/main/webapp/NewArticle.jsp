@@ -4,7 +4,7 @@
 <%@page import="com.ckeditor.CKEditorConfig"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.Map"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page language="Java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Puzzle CMS | Article</title>
@@ -37,12 +37,10 @@
     </div>
 </header>
 
-<p>Please complete all required fields</p>
-
 <div align="left">
     <p>
         <%
-            String value = session.getAttribute("text").toString();
+            String value = "Type here...";
             Map<String, String> attr = new HashMap<String, String>();
             attr.put("rows", "8");
             attr.put("cols", "50");
@@ -60,24 +58,24 @@
     <div align="left">
         <table>
             <tr>
-                <td>Name*: </td> <td><input type="text" name="name" value= "<% out.print(session.getAttribute("name"));%>" size=40 maxlength=100 enctype="multipart/form-data"/></td><br/>
+                <td>Name*: </td> <td><input type="text" name="name" value="" size=40 maxlength=100/></td><br/>
             </tr>
             <br>
             <tr>
-                <br><td>Title*: </td> <td><input type="text" name="title" value= "<% out.print(session.getAttribute("title"));%>" size=40 maxlength=100/><br/></td>
+                <br><td>Title*: </td> <td><input type="text" name="title" value= "" size=40 maxlength=100/><br/></td>
             </tr>
             <br>
             <tr>
-                <br><td>Keywords*: </td> <td><input type="text" name="keywords" value="<% out.print(session.getAttribute("keywords"));%>" size=100 maxlength=100/></td><br/>
+                <br><td>Keywords*: </td> <td><input type="text" name="keywords" value="" size=100 maxlength=100/></td><br/>
             </tr>
             <br>
             <tr>
-                <br><td>Description*: </td> <td><input type="text" name="description" value="<%out.print(session.getAttribute("description"));%>" size=100 maxlength=255/></td><br/>
+                <br><td>Description*: </td> <td><input type="text" name="description" value= "" size=100 maxlength=255/></td><br/>
             </tr>
             <br><br>
             <br>
         </table>
-        <form action="/validateArticle" method="get">
+        <form action="/createArticle" method="get">
             <br><br>
             <button><b>Submit</b></button>
         </form>

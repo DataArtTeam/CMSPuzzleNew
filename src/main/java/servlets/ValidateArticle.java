@@ -9,7 +9,7 @@ import java.io.IOException;
 @WebServlet("/validateArticle")
 public class ValidateArticle extends ServletProvider{
 
-    private static final String PAGE_NAME_TABS = "/Tabs.jsp";
+    private static final String PAGE_NAME_TABS = "/main";
     private static final String PAGE_NAME_DETAILS = "/ArticleDetails.jsp";
     private static final String CONTENT_TYPE = "text/html";
     private static final String ARTICLE_NAME = "name";
@@ -39,6 +39,7 @@ public class ValidateArticle extends ServletProvider{
         }
         else {
             page = PAGE_NAME_DETAILS;
+            setParametrs(request);
         }
         response.setContentType(CONTENT_TYPE);
         super.forwardRequest(request, response, page);
@@ -72,5 +73,12 @@ public class ValidateArticle extends ServletProvider{
 
         }
         return false;
+    }
+
+    private void setParametrs(HttpServletRequest request){
+        request.getSession().setAttribute("name", article_name);
+        request.getSession().setAttribute("title", article_title);
+        request.getSession().setAttribute("keywords", keywords);
+        request.getSession().setAttribute("description", description);
     }
 }

@@ -20,7 +20,7 @@ public class AllArticleController {
     public @ResponseBody
     String getAllArticlesDetails() {
 
-        ArticleList articleList = new ArticleList();
+        ArticleList articleList = ArticleList.getArticleList();
         String articleJSON = articleList.getArticlesInString();
 
         return articleJSON;

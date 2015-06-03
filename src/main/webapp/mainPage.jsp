@@ -20,7 +20,7 @@
 
 <body bgcolor="#FFFFF0">
 
-<form action="ArticleDetails.jsp" method="post">
+<form action="NewArticle.jsp" method="post">
     <button><b>Add new article</b></button>
 </form>
 <BR> <BR>
@@ -44,7 +44,7 @@
 
     <tr>
         <th><input type="checkbox" name="id" value="select"></th>
-        <th><a href=ArticleDetails.jsp><% out.print(article.getTitle());%></a></th>
+        <th><a href= <%out.print(article.getUrl());%>><%out.print(article.getTitle());%></a></th>
         <th><% out.print(article.getDescription());%></th>
         <th><% out.print(article.author.getName());%></th>
         <th><a href=ArticleDetails.jsp> show history</a></th>

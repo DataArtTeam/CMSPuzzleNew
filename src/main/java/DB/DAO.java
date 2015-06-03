@@ -40,7 +40,7 @@ public class DAO {
                "They are considered the best in the world. " +
                "The mass pilgrimage begins in the summer and ditsya until mid autumn.";
 
-       Article article1 = new Article(1, "new side of Provence" , "that every man should see, coming to France",
+       Article article1 = new Article(2, "new side of Provence" , "that every man should see, coming to France",
                "1432339200", "test", tags2, user1, text1, "the magic of Provence", "the magic of Provence", "Provence.png", 14,
                "France, Provence", 1);
        articleList.add(article);

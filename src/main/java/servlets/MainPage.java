@@ -39,6 +39,6 @@ public class MainPage extends ServletProvider{
         DAO dao = new DAO();
 
         AccessLevel accessLevel = accessProvider.getUserAccess(currentUser);
-        articleList = dao.getArticles(accessLevel);
+        articleList = ArticleList.getArticleList().list;
     }
 }

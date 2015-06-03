@@ -173,7 +173,7 @@ public class Article implements ContextObject{
     }
 
     private ArrayList<JSONObject> getSimilarArticles(){
-        ArticleList articleList = new ArticleList();
+        ArticleList articleList = ArticleList.getArticleList();
         return articleList.getSimilarArticles(id);
     }
 
@@ -185,5 +185,26 @@ public class Article implements ContextObject{
         return description;
     }
 
+    public String getName(){
+        return name;
+    }
 
+    public String getKeyWords(){
+        return kwds;
+    }
+
+    public String getText(){
+        return text;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public String getUrl(){
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("/article?id=");
+        stringBuffer.append(id);
+        return stringBuffer.toString();
+    }
 }
