@@ -42,7 +42,14 @@
 <div align="left">
     <p>
         <%
-            String value = session.getAttribute("text").toString();
+            String value;
+            Object sessionParamText = session.getAttribute("text");
+            if (sessionParamText != null) {
+                value = session.getAttribute("text").toString();
+            }
+            else {
+                value = "";
+            }
             Map<String, String> attr = new HashMap<String, String>();
             attr.put("rows", "8");
             attr.put("cols", "50");

@@ -53,7 +53,7 @@
     </p>
 </div>
 
-<form action="/validateArticle" method="GET">
+<form action="/createArticle" method="GET">
 
     <div align="left">
         <table>
