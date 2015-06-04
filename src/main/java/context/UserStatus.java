@@ -1,4 +1,4 @@
-package authorization;
+package context;
 
 
 public enum UserStatus {

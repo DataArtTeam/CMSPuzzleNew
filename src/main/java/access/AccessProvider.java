@@ -1,7 +1,7 @@
 package access;
 
 
-import authorization.User;
+import context.User;
 
 public class AccessProvider {
 

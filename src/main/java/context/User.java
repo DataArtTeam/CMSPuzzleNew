@@ -1,8 +1,7 @@
-package authorization;
+package context;
 
 
 import access.Role;
-import context.ContextObject;
 import org.json.JSONException;
 import org.json.JSONObject;
 

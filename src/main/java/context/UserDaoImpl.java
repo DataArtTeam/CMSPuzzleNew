@@ -1,8 +1,9 @@
-package authorization;
+package context;
 
 
 import DB.UserDao;
 import access.Role;
+import context.User;
 
 import java.util.ArrayList;
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import access.AccessLevel;
 import access.Role;
-import authorization.User;
+import context.User;
 import context.Article;
 import context.Tag;
 

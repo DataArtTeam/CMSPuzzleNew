@@ -1,6 +1,6 @@
-package authorization;
+package context;
 
-import DB.UserDao;
+import context.User;
 
 import java.util.ArrayList;
 

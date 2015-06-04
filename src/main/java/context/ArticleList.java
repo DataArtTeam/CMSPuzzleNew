@@ -1,8 +1,6 @@
 package context;
 
 import access.Role;
-import authorization.User;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;

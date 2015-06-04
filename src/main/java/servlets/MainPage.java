@@ -5,7 +5,7 @@ import DB.DAO;
 import access.AccessLevel;
 import access.AccessProvider;
 import access.Role;
-import authorization.User;
+import context.User;
 import context.Article;
 import context.ArticleList;
 

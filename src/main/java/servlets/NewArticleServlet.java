@@ -1,7 +1,7 @@
 package servlets;
 
 import access.Role;
-import authorization.User;
+import context.User;
 import context.Article;
 import context.ArticleList;
 

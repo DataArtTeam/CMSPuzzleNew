@@ -7,10 +7,10 @@
 <body>
     <br>
     <h1>Login is successful</h1>
-    <jsp:useBean id="user" class="authorization.User" scope="application"/>
+    <jsp:useBean id="user" class="context.User" scope="application"/>
     <br>
 
-    <form action="Logout.jsp" method="post">
+    <form action="logout.jsp" method="post">
         <input type="submit" value="LOGOUT"/>
     </form>
 </body>

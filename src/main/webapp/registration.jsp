@@ -5,46 +5,73 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>JSP Page</title>
+<title>Registration in CMSPuzzle</title>
 </head>
 <body>
-	<form action="/CMSPuzzle-1.0-SNAPSHOT/registration" method="post">
-		<h4>User does not exist. You must register</h4>
-		<table border=1>
+	<form action="registration" method="post">
+		<%
+			String firstName = (String) request.getAttribute("firstname");
+			String lastName = (String) request.getAttribute("lastname");
+			String login = (String) request.getAttribute("login");
+			String email = (String) request.getAttribute("email");
+			Boolean pasNotEquals = false;
+			pasNotEquals = (Boolean) request.getAttribute("passwords_not_equal");
+			Boolean reregister = false;
+			reregister = (Boolean) request.getAttribute("login_exists");
+			// 			String role = (String) request.getAttribute("role");
+			if (firstName == null)
+				firstName = "";
+			if (lastName == null)
+				lastName = "";
+			if (login == null)
+				login = "";
+			if (email == null)
+				email = "";
+			// 			if (role == null)
+			// 				role = "";
+// 			if (pasNotEquals.equals(true)){
+// 				out.println("<h3>Passwords are not equal</h3>");
+// 			}
+// 			if (reregister.equals(true)){
+// 				out.println("<h3>Login has already existed </h3>");
+// 			}
+		%>
+
+		<h4>
+			After registration we will send you a letter. 
+			<br />You should go by reference on it to confirm your registration
+			<br/>Password must be more than 8 symbols and less than 100
+		</h4>
+
+		<table border="1">
+			<tr>
+				<td>Your first name</td>
+				<td><input name="firstname" type="text" value="<%=firstName%>"></input></td>
+			</tr>
+			<tr>
+				<td>Your last name</td>
+				<td><input name="lastname" type="text" value="<%=lastName%>"></input></td>
+			</tr>
 			<tr>
 				<td>Login</td>
-				<td><input name="login" type=text></td>
+				<td><input name="login" type="text" value="<%=login%>"></input></td>
 			</tr>
 			<tr>
-				<td>Your firstname</td>
-				<td><input name="firstname" type=text></td>
-			</tr>
-			<tr>
-				<td>Your lastname</td>
-				<td><input name="lastname" type=text></td>
+				<td>Email</td>
+				<td><input name="email" type="text" value="<%=email%>"></input></td>
 			</tr>
 			<tr>
 				<td>Password</td>
-				<td><input name="password" type="password"></td>
-			</tr>
+				<td><input name="password" type="password" maxlength="100"></input></td>
+			</tr> 
 			<tr>
 				<td>Password confirmation</td>
-				<td><input name="password_confirmation" type="password"></td>
+				<td><input name="password_confirmation" type="password" maxlength="100"></input></td>
 			</tr>
 			<tr>
-				<td>Login</td>
-				<td><input name="login" type=text></td>
-			</tr>
-			<tr>
-				<td>Role</td>
-				<td><input name="role" type=></td>
-			</tr>
-			
-			<tr>
-				<td colspan="2"><input type="submit" value="submit"></td>
+				<td colspan="2"><input type="submit" value="submit"> </input></td>
 			</tr>
 		</table>
-
 	</form>
 </body>
 </html>

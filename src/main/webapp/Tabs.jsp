@@ -113,7 +113,7 @@
 <header>
     <div class="header-cms">
         <H1>Puzzle CMS</H1>
-        <%@ include file="/Logout.jsp" %>
+        <%@ include file="/logout.jsp" %>
     </div>
 </header>
 

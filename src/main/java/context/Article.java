@@ -1,6 +1,5 @@
 package context;
 
-import authorization.User;
 import org.json.JSONException;
 import org.json.JSONObject;
 
