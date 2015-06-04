@@ -29,7 +29,7 @@ public class ArticleList {
         String text = "Recently, a lot of trees are cut down. Environmentalists are sounding the alarm. Our world is in danger.";
 
         article = new Article(1, "threat to forests" , "how many trees left in the world",
-                "1432339200", "test", tags1, user, text, "Our planet is in danger", "threat to forests", "testImg.png", 14,
+                "1432339200", "test", tags1, user, text, "Our planet is in danger", "threat to forests", "http://178.212.192.72:8080/imagine", 14,
                 "forest, tree", 1);
 
         //TODO: find by id
@@ -67,8 +67,14 @@ public class ArticleList {
 
         StringBuffer articleString = new StringBuffer();
         articleString.append("[");
+        int listSize = list.size();
+        int amount = 1;
         for(Article articles: list){
             articleString.append(articles.getStringJSON());
+            if(amount < listSize){
+                articleString.append(",");
+            }
+            amount++;
         }
         articleString.append("]");
         return articleString.toString();
@@ -91,9 +97,9 @@ public class ArticleList {
 
         ArrayList<Article> articles = new ArrayList<Article>();
 
-        Article article1 = new Article(3, "What air we breathe", "test2.png", "1432339200", "url1");
-        Article article2 = new Article(5, "Red Book for the year is greater than", "test3.png", "1432339200", "url1");
-        Article article3 = new Article(8, "How can we help nature", "test2.png", "1432339200", "url1");
+        Article article1 = new Article(3, "What air we breathe", "http://178.212.192.72:8080/imagine", "1432339200", "url1");
+        Article article2 = new Article(5, "Red Book for the year is greater than", "http://178.212.192.72:8080/imagine", "1432339200", "url1");
+        Article article3 = new Article(8, "How can we help nature", "http://178.212.192.72:8080/imagine", "1432339200", "url1");
 
         articles.add(article1);
         articles.add(article2);
@@ -112,6 +118,15 @@ public class ArticleList {
         }
         else {
             return null;
+        }
+    }
+
+    public Article getArticleByURL(String url){
+        if (url == "forest"){
+            return article;
+        }
+        else {
+            return article1;
         }
     }
 

@@ -36,7 +36,6 @@ public class Article implements ContextObject{
     private String title;
     private String kwds;
     private String descr;
-    private int mode;
 
     public Article (int id, String name, String description, String created, String url,  ArrayList<Tag> tags,
                     User author, String text, String title, String descr, String imagePath, int review, String kwds, int mode){
@@ -55,7 +54,6 @@ public class Article implements ContextObject{
         this.review = review;
         this.kwds = kwds;
         this.descr = descr;
-        this.mode = mode;
 
     }
 
@@ -101,6 +99,7 @@ public class Article implements ContextObject{
         }
 
     }
+
     public JSONObject createAbbreviatedJSON(){
         try {
 
@@ -142,6 +141,11 @@ public class Article implements ContextObject{
     }
 
     public String getStringJSON() {
+        int mode = 0;
+        return getStringJSON(mode);
+    }
+
+    public String getStringJSON(int mode) {
         JSONObject articleInJSON;
 
         if(mode == 0){
@@ -155,7 +159,6 @@ public class Article implements ContextObject{
 
         return articleInString;
     }
-
 
     private ArrayList<JSONObject> getTagsName(){
 
@@ -207,4 +210,5 @@ public class Article implements ContextObject{
         stringBuffer.append(id);
         return stringBuffer.toString();
     }
+
 }

@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/website/alltags")
-public class TagsController {
+@RequestMapping("/website/tagsearch")
+public class TagSearchController {
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "{id}", method = RequestMethod.GET)
     public @ResponseBody
-    String getAllTags() {
-        ListTags listTags = new ListTags();
-        return listTags.getTagsInString();
+    String getTagsByID() {
+            ListTags listTags = new ListTags();
+            return listTags.getTagsInString();
+        }
     }
-}

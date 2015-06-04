@@ -22,7 +22,7 @@ public class DAO {
        String text = "Recently, a lot of trees are cut down. Environmentalists are sounding the alarm. Our world is in danger.";
 
        Article article = new Article(1, "threat to forests" , "how many trees left in the world",
-               "1432339200", "test", tags1, user, text, "Our planet is in danger", "threat to forests", "testImg.png", 14,
+               "1432339200", "forest", tags1, user, text, "Our planet is in danger", "threat to forests", "testImg.png", 14,
                "forest, tree", 1);
 
        //TODO: find by id
@@ -41,7 +41,7 @@ public class DAO {
                "The mass pilgrimage begins in the summer and ditsya until mid autumn.";
 
        Article article1 = new Article(2, "new side of Provence" , "that every man should see, coming to France",
-               "1432339200", "test", tags2, user1, text1, "the magic of Provence", "the magic of Provence", "Provence.png", 14,
+               "1432339200", "Provence", tags2, user1, text1, "the magic of Provence", "the magic of Provence", "Provence.png", 14,
                "France, Provence", 1);
        articleList.add(article);
        articleList.add(article1);

@@ -14,19 +14,31 @@ public class ListTags {
 
         ArrayList<Tag> tags = getAllTags();
         ArrayList<JSONObject> tagsInJSON = new ArrayList<JSONObject>();
-
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("[");
+        int listSize = tags.size();
+        int amount = 1;
         for (Tag tag: tags){
-            tagsInJSON.add(tag.getTagInJSON());
-        }
+            //tagsInJSON.add(tag.getTagInJSON());
+            stringBuffer.append(tag.getTagInJSON());
+            if (amount < listSize){
+                stringBuffer.append(",");
+            }
+            amount ++;
 
-        try {
-            JSONObject listTagsJSON = new JSONObject();
-            listTagsJSON.put(KEY_TAGS, tagsInJSON);
-            return listTagsJSON.toString();
         }
-        catch (JSONException e){
-            return null;
-        }
+        stringBuffer.append("]");
+        return stringBuffer.toString();
+
+//        try {
+//            JSONObject listTagsJSON = new JSONObject();
+//            listTagsJSON.put(KEY_TAGS, tagsInJSON);
+//            return listTagsJSON.toString();
+//        }
+//        catch (JSONException e){
+//            return null;
+//        }
+
     }
 
     public ArrayList<Tag> getAllTags(){
