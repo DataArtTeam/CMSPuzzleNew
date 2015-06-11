@@ -1,11 +1,9 @@
 package context;
 
-
 public enum ArticleStatus {
-    EDITED_AUTHOR,
-    CHECKED_CORRECTOR,
-    ASSERT_EDITOR,
-    IN_ARCHIVE,
+    AUTHOR,
+    CORRECTOR,
+    EDITOR,
     DELETED,
-    AVAILABLE_ON_WEBSITE
+    WEBSITE
 }

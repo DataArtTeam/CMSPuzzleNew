@@ -53,7 +53,7 @@ public class User implements Serializable, hibernate.tables.Table{
 	private String confirmCode;
 	@Column (name = "u_restore_code")
 	private String restoreCode;
-	
+
 	public Integer getId() {
 		return id;
 	}

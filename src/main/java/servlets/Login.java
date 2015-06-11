@@ -1,8 +1,10 @@
 package servlets;
 
+import context.UserSession;
 import hibernate.dao.UserDao;
 import hibernate.general.HibernateFactory;
 import hibernate.tables.User;
+import hibernate.tables.userInfo.UserRole;
 import hibernate.tables.userInfo.UserStatus;
 
 import java.io.IOException;
@@ -10,6 +12,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.sql.SQLException;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 //import javax.servlet.annotation.WebServlet;
 import javax.servlet.annotation.WebServlet;
@@ -21,16 +24,19 @@ import authorization.PasswordHash;
 
 @WebServlet("/login")
 public class Login extends HttpServlet {
+
 	private static final String SUCCESS_LOGIN = "/successLogin.jsp";
 	private static final String RELOGIN = "/relogin.jsp";
 	private static final String ERROR = "/error.jsp";
 	private static final String LOGIN = "/login.jsp";
+    private static final String MAIN_PAGE = "/main";
 	private static final long serialVersionUID = -4050086711880871778L;
 	UserDao userDaoImpl = HibernateFactory.getInstance().getUserDao();
 
 	@Override
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+
 		String login = request.getParameter("login");
 		String password = request.getParameter("password");
 		request.setAttribute("login", login);
@@ -41,7 +47,6 @@ public class Login extends HttpServlet {
 					|| (password == null) || (password.length() > 100)
 					|| (password.length() < 8) || (password.contains(" "))
 					|| (password.contains("/r")) || (password.contains("/n"))) {
-				// request.setAttribute("access_wrong", true);
 				getServletContext().getRequestDispatcher(LOGIN).forward(
 						request, response);
 				return;
@@ -58,8 +63,10 @@ public class Login extends HttpServlet {
 						request.setAttribute("lastname", user.getLastName());
 						request.setAttribute("access_wrong", false);
 						user.setStatus(UserStatus.AVAILABLE);
+                        fillUserSession(user.getLogin(), user.getFirstName(), user.getLastName(), user.getRole(), user.getId());
 						userDaoImpl.updateUser(user);
-						getServletContext().getRequestDispatcher(SUCCESS_LOGIN).forward(request, response);
+                        RequestDispatcher dispatcher = request.getRequestDispatcher(MAIN_PAGE);
+                        dispatcher.forward(request, response);
 						return;
 					} else {
 						request.setAttribute("access_wrong", true);
@@ -83,4 +90,9 @@ public class Login extends HttpServlet {
 			throws NoSuchAlgorithmException, InvalidKeySpecException {
 		return PasswordHash.validatePassword(password, user.getPassword());
 	}
+
+    private void fillUserSession(String login, String firstName, String lastName, UserRole userRole, Integer id){
+        UserSession userSession = UserSession.getUser();
+        userSession.fillUserAttribute(login, firstName, lastName, userRole, id);
+    }
 }

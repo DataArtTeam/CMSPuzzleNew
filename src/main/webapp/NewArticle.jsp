@@ -8,82 +8,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Puzzle CMS | Article</title>
-    <style>
-        button {
-            background: #E6E6FA;
-            border: 1px solid #7a7b7e;
-            width: 120px;
-            height: 30px;
-            border-radius: 5px;
-        }
-        header {
-            display: block;
-            height: 50px;
-            background: #eee5de;
-        }
-        .header-cms {
-            background: #eee5de
-        height: 50px;
-            text-align: start;
-        }
-    </style>
 </head>
 
-<body bgcolor="#FFFFF0">
-
 <header>
-    <div class="header-cms">
-        <H1>Editing article</H1>
-    </div>
+    <H1>Editing article</H1>
 </header>
 
-<div align="left">
-    <p>
-        <%
-            String value = "Type here...";
-            Map<String, String> attr = new HashMap<String, String>();
-            attr.put("rows", "8");
-            attr.put("cols", "50");
-            CKEditorConfig settings = new CKEditorConfig();
-            settings.addConfigValue("toolbar", "Full");
-        %>
-        <ckeditor:editor textareaAttributes="<%=attr %>"
-                         basePath="../ckeditor/" config="<%=settings %>"
-                         editor="editor1" value="<%= value %>"/>
-    </p>
-</div>
-
 <form action="/createArticle" method="GET">
+
+    <table>
+        <tr>
+            <td>Name*: </td> <td><input type="text" name="name" value="" size=40 maxlength=100/></td><br/>
+        </tr>
+        <br>
+        <tr>
+            <td>Title*: </td> <td><input type="text" name="title" value= "" size=40 maxlength=100/><br/></td>
+        </tr>
+        <br>
+    </table>
+
+    <div align="left">
+        <p>
+            <%
+                String value = "Type here...";
+                Map<String, String> attr = new HashMap<String, String>();
+                CKEditorConfig settings = new CKEditorConfig();
+                settings.addConfigValue("toolbar", "Full");
+            %>
+            <ckeditor:editor textareaAttributes="<%=attr %>"
+                             basePath="../ckeditor/" config="<%=settings %>"
+                             editor="editor1" value="<%= value %>"/>
+        </p>
+    </div>
 
     <div align="left">
         <table>
             <tr>
-                <td>Name*: </td> <td><input type="text" name="name" value="" size=40 maxlength=100/></td><br/>
+                <td>Keywords*: </td> <td><input type="text" name="keywords" value="" size=100 maxlength=100/></td><br/>
             </tr>
             <br>
             <tr>
-                <br><td>Title*: </td> <td><input type="text" name="title" value= "" size=40 maxlength=100/><br/></td>
-            </tr>
-            <br>
-            <tr>
-                <br><td>Keywords*: </td> <td><input type="text" name="keywords" value="" size=100 maxlength=100/></td><br/>
-            </tr>
-            <br>
-            <tr>
-                <br><td>Description*: </td> <td><input type="text" name="description" value= "" size=100 maxlength=255/></td><br/>
+                <td>Description*: </td> <td><input type="text" name="description" value= "" size=100 maxlength=255/></td><br/>
             </tr>
             <br><br>
+            <br>
+            <tr>
+                <td>Link*: </td> <td><input type="text" name="link" value="" size=100 maxlength=100/></td><br/>
+            </tr>
+            <tr>
+                <td>Image name*: </td> <td><input type="text" name="imageName" value="" size=100 maxlength=100/></td><br/>
+            </tr>
             <br>
         </table>
-        <form action="/createArticle" method="get">
-            <br><br>
-            <button><b>Submit</b></button>
-        </form>
+        <br><br>
+        <button><b>Submit</b></button>
     </div>
 </form>
 
+<form action="/checktag" method="get">
+    <button><b>Add tags</b></button>
+</form>
+
 <div align="right">
-    <form action="Tabs.jsp" method="get">
+    <form action="/main" method="get">
         <button><b>Close</b></button>
     </form>
 </div>

@@ -39,7 +39,7 @@ public class ValidateArticle extends ServletProvider{
         }
         else {
             page = PAGE_NAME_DETAILS;
-            setParametrs(request);
+            setParameters(request);
         }
         response.setContentType(CONTENT_TYPE);
         super.forwardRequest(request, response, page);
@@ -75,7 +75,7 @@ public class ValidateArticle extends ServletProvider{
         return false;
     }
 
-    private void setParametrs(HttpServletRequest request){
+    private void setParameters(HttpServletRequest request){
         request.getSession().setAttribute("name", article_name);
         request.getSession().setAttribute("title", article_title);
         request.getSession().setAttribute("keywords", keywords);

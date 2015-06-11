@@ -1,7 +1,6 @@
 package servlets;
 
 
-import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,24 +11,47 @@ import java.io.*;
 @WebServlet("/imagine")
 public class ImagineServlet extends HttpServlet {
 
+    private String imageName;
+    private String imagePass;
+
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)  {
         response.setContentType("image/jpeg");
-        ServletOutputStream out;
-        out = response.getOutputStream();
-        FileInputStream fin = new FileInputStream("D:\\pngcms\\forest.png");
+        getParametersFromRequest(request);
+        getFullImagePath();
+        uploadImage(response);
+    }
 
-        BufferedInputStream bin = new BufferedInputStream(fin);
-        BufferedOutputStream bout = new BufferedOutputStream(out);
-        int ch = 0;
-        ;
-        while ((ch = bin.read()) != -1) {
-            bout.write(ch);
+    private void getFullImagePath(){
+        StringBuffer imagePassBufer = new StringBuffer();
+        imagePassBufer.append("D:\\pngcms\\");
+        imagePassBufer.append(imageName);
+        imagePass = imagePassBufer.toString();
+    }
+
+    private void getParametersFromRequest(HttpServletRequest request){
+        imageName = request.getParameter("imageName");
+    }
+
+    private void uploadImage(HttpServletResponse response){
+        try {
+
+            ServletOutputStream out = response.getOutputStream();
+            FileInputStream fin = new FileInputStream(imagePass.toString());
+
+            BufferedInputStream bin = new BufferedInputStream(fin);
+            BufferedOutputStream bout = new BufferedOutputStream(out);
+            int ch = 0;
+            while ((ch = bin.read()) != -1) {
+                bout.write(ch);
+            }
+            fin.close();
+            bin.close();
+            bout.close();
+            out.close();
         }
+        catch (IOException e){
 
-        bin.close();
-        fin.close();
-        bout.close();
-        out.close();
+        }
     }
 }

@@ -1,15 +1,16 @@
 package access;
 
 
-import context.User;
+import context.UserSession;
+import hibernate.tables.userInfo.UserRole;
 
 public class AccessProvider {
 
-    public AccessLevel getUserAccess(User user){
-        Role userRole = user.getRole();
+    public AccessLevel getUserAccess(UserSession userSession){
+        UserRole userRole = userSession.getRole();
         AccessLevel accessLevel;
         switch (userRole){
-            case USER:
+            case UNCONFIRMED:
                 accessLevel = AccessLevel.NONE;
                 break;
             case ADMINISTRATOR:

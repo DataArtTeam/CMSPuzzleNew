@@ -5,7 +5,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Article implements ContextObject{
+public class Article implements ContextObject {
 
     private static final String KEY_NAME            = "name";
     private static final String KEY_ID              = "id";
@@ -30,14 +30,15 @@ public class Article implements ContextObject{
     private String url;
     private int review;
     private ArrayList<Tag> tags;
-    public User author;
+    public UserSession author;
     private String text;
     private String title;
     private String kwds;
     private String descr;
+    private ArticleStatus articleStatus;
 
     public Article (int id, String name, String description, String created, String url,  ArrayList<Tag> tags,
-                    User author, String text, String title, String descr, String imagePath, int review, String kwds, int mode){
+                    UserSession author, String text, String title, String descr, String imagePath, int review, String kwds, ArticleStatus articleStatus){
 
         this.id = id;
         this.name = name;
@@ -53,6 +54,7 @@ public class Article implements ContextObject{
         this.review = review;
         this.kwds = kwds;
         this.descr = descr;
+        this.articleStatus = articleStatus;
 
     }
 
@@ -209,5 +211,18 @@ public class Article implements ContextObject{
         stringBuffer.append(id);
         return stringBuffer.toString();
     }
+
+    public String getImg(){
+        return imagePath;
+    }
+
+    public ArticleStatus getStatus(){
+        return articleStatus;
+    }
+
+    public void setStatus(ArticleStatus newStatus){
+        this.articleStatus = newStatus;
+    }
+
 
 }

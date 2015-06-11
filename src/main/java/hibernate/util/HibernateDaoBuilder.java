@@ -19,7 +19,8 @@ public class HibernateDaoBuilder{
 			session.beginTransaction();
 			session.save(table);
 			session.getTransaction().commit();
-		} finally {
+		}
+        finally {
 			if ((session != null) && (session.isOpen())) {
 				session.close();
 			}
@@ -89,6 +90,39 @@ public class HibernateDaoBuilder{
 		}
 		return tableValues;
 	}
+
+    public static List<? extends Table> getContents(Table table) {
+        Session session = null;
+        List<? extends Table> tableValues = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            tableValues= (List<? extends Table>)session.createCriteria(table.getClass()).list();;
+            session.getTransaction().commit();
+        } finally {
+            if ((session != null) && (session.isOpen())) {
+                session.close();
+            }
+        }
+        return tableValues;
+    }
+
+    public static List<Content> getContentsList(Table table) {
+        Session session = null;
+        List<Content> tableValues = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            tableValues= (List<Content>)session.createCriteria(table.getClass()).list();;
+            session.getTransaction().commit();
+        } finally {
+            if ((session != null) && (session.isOpen())) {
+                session.close();
+            }
+        }
+        return tableValues;
+    }
+
 	
 	public static List<? extends Table> getTableValuesByProperty(String propertyName1,
 			Object propertyValue1, String propertyName2, Object propertyValue2, String propertyName3, Object propertyValue3,

@@ -1,0 +1,122 @@
+<div id="content_admin" class="container">
+
+    <div class="span12">
+        <div class="row">
+            <div class="span6">
+                <input type=button value="Add new" class="btn btn-success">
+                <input type=button value="Delete" class="btn btn-danger">
+            </div>
+            <div id="search-refresh-bg" class="span6">
+                <input type="search" placeholder="Search" class="input-medium search-query">
+                <input type="button" class="btn" value="Search">
+                <a class="btn" href="#"><i class="icon-refresh"></i></a>
+            </div>
+        </div>
+        <div class="row" style="height: 20px"></div>
+        <div class="row">
+            <table class="table table-striped">
+                <tr>
+                    <th>Select</th>
+                    <th>Title</th>
+                    <th>Preview</th>
+                    <th>Autor</th>
+                    <th>History</th>
+                    <th>Next step</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Archived</td>
+                    <td>18.05.2015</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Edited</td>
+                    <td>18.05.2015</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Deleted</td>
+                    <td>18.05.2015</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Deleted</td>
+                    <td>18.05.2015</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Deleted</td>
+                    <td>18.05.2015</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Edited</td>
+                    <td>18.05.2015</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Edited</td>
+                    <td>18.05.2015</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Edited</td>
+                    <td>18.05.2015</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Edited</td>
+                    <td>18.05.2015</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Lorem ipsum dolor sit</td>
+                    <td>Lorem ipsum dolor sit atem</td>
+                    <td>Lorem</td>
+                    <td>Archived</td>
+                    <td>18.05.2015</td>
+                </tr>
+            </table>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="paginator text-center">
+    <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+</div>
+</div>

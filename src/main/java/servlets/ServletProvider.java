@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public abstract class ServletProvider extends HttpServlet {
 
-
-    public abstract @Override void doGet(HttpServletRequest request, HttpServletResponse response)
+    @Override
+    public abstract void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException;
 
     public void forwardRequest(HttpServletRequest request, HttpServletResponse response, String pageName)
@@ -19,4 +19,5 @@ public abstract class ServletProvider extends HttpServlet {
 
         dispatcher.forward(request, response);
     }
+
 }

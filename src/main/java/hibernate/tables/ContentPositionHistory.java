@@ -121,4 +121,5 @@ public class ContentPositionHistory implements Serializable, hibernate.tables.Ta
 				.append(", userId=").append(userId)
 				.append("]").toString();
 	}
+
 }
