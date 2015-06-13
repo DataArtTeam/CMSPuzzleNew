@@ -71,8 +71,8 @@ public class RestorePassword extends HttpServlet {
 		String[] recipients = { email };
 		String subject = "Restorin password";
 		String info = this.getServletContext().getContextPath();
-		String text = "You have already registered  in website " + info
-				+ ". To restore your password go by reference " 
+		String text = "Hello! You are registered to the website. " + info
+				+ ". To restore your password сlick on the link "
 				+ "http://" + ServletUtil.MARGO_HOST + ":" + request.getServerPort() + info
 				+ "/restoringPassword?login=" + user.getLogin()
 				+ "&restoreCode=" + restoreCode + " or "

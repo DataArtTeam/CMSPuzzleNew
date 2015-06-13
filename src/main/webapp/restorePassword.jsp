@@ -13,10 +13,10 @@
 			email = "";
 	%>
 	<form action="restorePassword" method="post">
-		<h3>Please enter user login and his email</h3>
+		<h3>Please, enter your email.</h3>
 
 		<h4>
-			Then we will send you a letter with a reference. You will should go by reference 
+            We will send you a letter with a restoring link in 5 minutes. You will should go by reference
 		</h4>
 		<table border="1">
 			<tr>

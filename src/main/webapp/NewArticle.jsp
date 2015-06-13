@@ -70,7 +70,7 @@
                         </tr>
                         <tr>
                             <th></th>
-                            <th>Link <input type="text" name="link" class="input-block-level"></th>
+                            <th>Reference <input type="text" name="link" class="input-block-level"></th>
                         </tr>
                         <tr>
                             <th></th>
