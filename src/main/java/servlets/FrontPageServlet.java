@@ -40,8 +40,7 @@ public class FrontPageServlet extends ServletProvider{
         try {
             List<FrontPage> frontPageList = frontPageDao.getFrontPages();
             for (FrontPage page: frontPageList){
-                Content content = contentDao.getContent(page.getId());
-                contents.add(content);
+                contents.add(page.getContentId());
             }
         }
         catch (SQLException e){

@@ -20,8 +20,9 @@ D:\CMS\puzzle\src\main\java\servlets\ServletUtil.java
 D:\CMS\puzzle\src\main\java\hibernate\daoImpl\ContentTagLinkerDaoImpl.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\ContentTagLinkerDao.java
 D:\CMS\puzzle\src\main\java\hibernate\daoImpl\FrontPageDaoImpl.java
-D:\CMS\puzzle\src\main\java\context\ContentSession.java
 D:\CMS\puzzle\src\main\java\controllers\TagsController.java
+D:\CMS\puzzle\src\main\java\servlets\FrontPageRemoverServlet.java
+D:\CMS\puzzle\src\main\java\context\ContentSession.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\FrontPageDao.java
 D:\CMS\puzzle\src\main\java\context\UsersList.java
 D:\CMS\puzzle\src\main\java\servlets\ContentListServlet.java

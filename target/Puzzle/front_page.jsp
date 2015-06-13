@@ -37,37 +37,46 @@
 <div id="container">
     <div class="menu-btn">&#9776; Menu</div>
 
-    <h1 style="text-align:center">Articles</h1>
+    <h1 style="text-align:center">Front page</h1>
 </div>
 
+</div>
 
-<div id="content_page_main_materials" class="container">
-    <div class="row">
-
+<form action="/delete_from_front" method="get">
+    <div class="container" style="width: 300px;">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Delete article from front page</button>
     </div>
+    <div id="content_page_main_materials" class="container">
 
-    <div class="row" style="height: 20px"></div>
-    <table class="table table-striped">
-        <tr>
-            <th>Title</th>
-            <th>Preview</th>
-            <th>Author</th>
-        </tr>
-        <tbody>
+        <div class="row">
 
-        <% ArrayList<Content> contents = (ArrayList) session.getAttribute("frontList");
-            for(Content content: contents) {%>
+        </div>
 
-        <tr>
-            <th><a href= <%out.print(content.getId());%>><%out.print(content.getTitle());%></a></th>
-            <th><% out.print(content.getDescriptionOfContent());%></th>
-            <th><% out.print(content.getAuthor().getLogin());%></th>
-        </tr>
+        <div class="row" style="height: 20px"></div>
+        <table class="table table-striped">
+            <tr>
+                <th>Select</th>
+                <th>Title</th>
+                <th>Preview</th>
+                <th>Author</th>
+            </tr>
+            <tbody>
 
-        <%}%>
-        </tbody>
-    </table>
-</div>
+            <% ArrayList<Content> contents = (ArrayList) session.getAttribute("frontList");
+                for(Content content: contents) {%>
+
+            <tr>
+                <th><input type="checkbox" name="contentList" value=<%out.print(content.getId());%> ></th>
+                <th><a href= <%out.print(content.getId());%>><%out.print(content.getTitle());%></a></th>
+                <th><% out.print(content.getDescriptionOfContent());%></th>
+                <th><% out.print(content.getAuthor().getLogin());%></th>
+            </tr>
+
+            <%}%>
+            </tbody>
+        </table>
+    </div>
+</form>
 
 <script src="../dist/js/pushy.min.js"></script>
 </body>

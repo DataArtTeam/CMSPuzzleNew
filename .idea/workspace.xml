@@ -2,58 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab5d17b-37bf-4ad5-a29a-3e8e8b781036" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/servlets/FrontPageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/front_page.jsp" />
-      <change type="DELETED" beforePath="D:\CMS\puzzle\src\main\webapp\content_page.jsp" afterPath="" />
-      <change type="DELETED" beforePath="D:\CMS\puzzle\src\main\webapp\mainArticles.jsp" afterPath="" />
-      <change type="DELETED" beforePath="D:\CMS\puzzle\target\Puzzle\WEB-INF\classes\servlets\CheckTagsControllers.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\CMS\puzzle\target\Puzzle\checkTag.jsp" afterPath="" />
-      <change type="DELETED" beforePath="D:\CMS\puzzle\target\Puzzle\content_page.jsp" afterPath="" />
-      <change type="DELETED" beforePath="D:\CMS\puzzle\target\Puzzle\mainArticles.jsp" afterPath="" />
-      <change type="DELETED" beforePath="D:\CMS\puzzle\target\classes\servlets\CheckTagsControllers.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/CheckTagServlet.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/CheckTagServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/CheckTagServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/CheckTagServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/ContentListServlet.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/ContentListServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/ContentListServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/ContentListServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/ContentServlet.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/ContentServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/ContentServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/ContentServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/hibernate/tables/FrontPage.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/hibernate/tables/FrontPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hibernate/tables/FrontPage.class" afterPath="$PROJECT_DIR$/target/classes/hibernate/tables/FrontPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/MainArticlesServlet.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/MainArticlesServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/MainArticlesServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/MainArticlesServlet.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/servlets/FrontPageRemoverServlet.java" />
+      <change type="DELETED" beforePath="D:\CMS\puzzle\target\Puzzle\NewArticle.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/FrontPageServlet.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/FrontPageServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/FrontPageServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/FrontPageServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle.war" afterPath="$PROJECT_DIR$/target/Puzzle.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/RestorePassword.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/RestorePassword.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/RestorePassword.class" afterPath="$PROJECT_DIR$/target/classes/servlets/RestorePassword.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/StatusController.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/StatusController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/StatusController.class" afterPath="$PROJECT_DIR$/target/classes/servlets/StatusController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ArticleDetails.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/ArticleDetails.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/ArticleDetails.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/ArticleDetails.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/CheckTagServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/CheckTagServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/ContentListServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/ContentListServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/ContentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/ContentServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hibernate/tables/FrontPage.java" afterPath="$PROJECT_DIR$/src/main/java/hibernate/tables/FrontPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/MainArticlesServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/MainArticlesServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/NewArticle.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/NewArticle.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/StatusController.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/StatusController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/contentHistory.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/contentHistory.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/contentHistory.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/contentHistory.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/contentList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/contentList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/SelectedTagsControllers.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/SelectedTagsControllers.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/SelectedTagsControllers.class" afterPath="$PROJECT_DIR$/target/classes/servlets/SelectedTagsControllers.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/contentList.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/contentList.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/front_page.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/front_page.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/front_page.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/front_page.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/main.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/restorePassword.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/restorePassword.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/tagsList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/tagsList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/tagsList.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/tagsList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/userList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/userList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/userList.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/userList.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\CMS\puzzle\src\main\java\servlets\CheckTagsControllers.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedTagsControllers.java" />
-      <change type="MOVED" beforePath="D:\CMS\puzzle\src\main\webapp\NewArticle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/content_view.jsp" />
-      <change type="MOVED" beforePath="D:\CMS\puzzle\src\main\webapp\checkTag.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/select_tag.jsp" />
     </list>
     <ignored path="PuzzleCMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,7 +66,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/daoImpl/Tag.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/TagListSingleton.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/content_add_article.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/new.jsp" />
@@ -150,10 +112,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/userList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/tagsList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/main.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/front_page.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/contentList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/SelectedTagsControllers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/FrontPageRemoverServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/front_page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java" />
       </list>
     </option>
   </component>
@@ -240,6 +203,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -688,8 +653,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1036,7 +999,7 @@
       <method />
     </configuration>
     <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.61" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8090/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8095/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -1048,8 +1011,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_PuzzleCMS" />
-        <option name="HTTP_PORT" value="8090" />
-        <option name="JNDI_PORT" value="8060" />
+        <option name="HTTP_PORT" value="8095" />
+        <option name="JNDI_PORT" value="8065" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1170,12 +1133,13 @@
       <workItem from="1434028407415" duration="5199000" />
       <workItem from="1434036916042" duration="15232000" />
       <workItem from="1434103459981" duration="10193000" />
-      <workItem from="1434120877794" duration="7029000" />
+      <workItem from="1434120877794" duration="9436000" />
+      <workItem from="1434200224877" duration="2023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="395397000" />
+    <option name="totallyTimeSpent" value="399827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1554" height="916" extended-state="0" />
@@ -1186,7 +1150,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21485944" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21485944" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1204,17 +1168,17 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4535032" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2570281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2570281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1283,8 +1247,26 @@
           <properties />
           <option name="timeStamp" value="205" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlets/FrontPageRemoverServlet.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/front_page.jsp</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="208" />
+      <option name="time" value="213" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1465,20 +1447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.891129" vertical-offset="0" max-vertical-offset="935">
           <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-          <folding>
-            <element signature="e#176#183#0" expanded="false" />
-            <element signature="e#380#383#0" expanded="false" />
-            <element signature="e#597#607#0" expanded="false" />
-            <element signature="e#738#748#0" expanded="false" />
-            <element signature="e#873#901#0" expanded="false" />
-            <element signature="method#ContentPositionHistory#0;class#ContentPositionHistory#0" expanded="false" />
-            <element signature="method#ContentPositionHistory#1;class#ContentPositionHistory#0" expanded="false" />
-            <element signature="e#1877#1878#0" expanded="false" />
-            <element signature="e#1906#1907#0" expanded="false" />
-            <element signature="method#hashCode#0;class#ContentPositionHistory#0" expanded="false" />
-            <element signature="method#equals#0;class#ContentPositionHistory#0" expanded="false" />
-            <element signature="method#toString#0;class#ContentPositionHistory#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1512,12 +1480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="850">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="method#fillUserAttribute#0;class#UserSession#0" expanded="false" />
-            <element signature="method#createFullJSON#0;class#UserSession#0" expanded="false" />
-            <element signature="method#getStringJSON#0;class#UserSession#0" expanded="false" />
-            <element signature="method#getUser#0;class#UserSession#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1624,22 +1586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/content_view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.1923075" vertical-offset="1794" max-vertical-offset="2312">
-          <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/tables/FrontPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/StatusController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20481928" vertical-offset="0" max-vertical-offset="1462">
@@ -1652,7 +1598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24702774" vertical-offset="0" max-vertical-offset="757">
           <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1688,46 +1633,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/front_page.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/SelectedTagsControllers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.73077" vertical-offset="170" max-vertical-offset="1360">
-          <caret line="57" column="84" selection-start-line="57" selection-start-column="84" selection-end-line="57" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.15994623" vertical-offset="0" max-vertical-offset="816">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/content_view.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1072423" vertical-offset="1160" max-vertical-offset="2312">
+          <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/FrontPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17965654" vertical-offset="153" max-vertical-offset="1258">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/tables/FrontPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35931307" vertical-offset="0" max-vertical-offset="1666">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/contentList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.346154" vertical-offset="973" max-vertical-offset="1887">
-          <caret line="70" column="32" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="32" />
+        <state vertical-scroll-proportion="-5.730769" vertical-offset="718" max-vertical-offset="1887">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/FrontPageRemoverServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.09408602" vertical-offset="444" max-vertical-offset="1377">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79435486" vertical-offset="310" max-vertical-offset="1054">
-          <caret line="53" column="65" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1037">
+          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/FrontPageController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/front_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5255376" vertical-offset="153" max-vertical-offset="1258">
-          <caret line="32" column="58" selection-start-line="31" selection-start-column="7" selection-end-line="32" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/SelectedTagsControllers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15994623" vertical-offset="0" max-vertical-offset="816">
-          <caret line="18" column="57" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.5027855" vertical-offset="795" max-vertical-offset="1513">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding />
         </state>
       </provider>

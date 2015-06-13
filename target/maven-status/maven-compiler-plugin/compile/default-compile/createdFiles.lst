@@ -17,6 +17,7 @@ servlets\NewTagController.class
 context\ArticleStatus.class
 servlets\ServletUtil.class
 hibernate\dao\ContentTagLinkerDao.class
+servlets\FrontPageRemoverServlet.class
 hibernate\dao\UserDao.class
 hibernate\util\HibernateUtil.class
 servlets\FrontPageController.class

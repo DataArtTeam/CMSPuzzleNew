@@ -42,7 +42,7 @@
 </div>
 
 <div class="container" style="width: 300px;">
-    <form action="NewArticle.jsp" method="post">
+    <form action="content_view.jsp" method="post">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Add new</button>
     </form>
 </div>
