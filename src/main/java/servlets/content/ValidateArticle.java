@@ -1,4 +1,6 @@
-package servlets;
+package servlets.content;
+
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/validateArticle")
-public class ValidateArticle extends ServletProvider{
+public class ValidateArticle extends ServletProvider {
 
     private static final String PAGE_NAME_TABS = "/main";
     private static final String PAGE_NAME_DETAILS = "/ArticleDetails.jsp";

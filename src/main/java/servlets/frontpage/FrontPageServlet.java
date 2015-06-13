@@ -1,4 +1,4 @@
-package servlets;
+package servlets.frontpage;
 
 import hibernate.dao.ContentDao;
 import hibernate.dao.FrontPageDao;
@@ -6,6 +6,7 @@ import hibernate.daoImpl.ContentDaoImpl;
 import hibernate.daoImpl.FrontPageDaoImpl;
 import hibernate.tables.Content;
 import hibernate.tables.FrontPage;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/front")
-public class FrontPageServlet extends ServletProvider{
+public class FrontPageServlet extends ServletProvider {
 
     private static final String pageName = "/front_page.jsp";
     private static final String CONTENT_TYPE = "text/html";

@@ -1,4 +1,4 @@
-package servlets;
+package servlets.content;
 
 import context.*;
 import controllers.TagListSingleton;
@@ -12,6 +12,7 @@ import hibernate.tables.Content;
 import hibernate.tables.ContentPositionHistory;
 import hibernate.tables.Tag;
 import hibernate.tables.User;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

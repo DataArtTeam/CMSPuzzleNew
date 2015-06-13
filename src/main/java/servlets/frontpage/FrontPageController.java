@@ -1,4 +1,4 @@
-package servlets;
+package servlets.frontpage;
 
 import hibernate.dao.ContentDao;
 import hibernate.dao.FrontPageDao;
@@ -6,6 +6,7 @@ import hibernate.daoImpl.ContentDaoImpl;
 import hibernate.daoImpl.FrontPageDaoImpl;
 import hibernate.tables.Content;
 import hibernate.tables.FrontPage;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

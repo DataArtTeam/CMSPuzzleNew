@@ -1,10 +1,9 @@
-package servlets;
+package servlets.authorisation;
 
 import hibernate.dao.UserDao;
 import hibernate.general.HibernateFactory;
 import hibernate.tables.User;
-import hibernate.tables.userInfo.UserRole;
-import hibernate.tables.userInfo.UserStatus;
+import servlets.authorisation.ServletUtil;
 
 import java.io.IOException;
 import java.sql.SQLException;

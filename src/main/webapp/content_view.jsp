@@ -48,7 +48,7 @@
 <div id="content_add_article">
     <div class="container">
         <div class="row-fluid">
-            <form action="/createArticle">
+            <form action="/add_content">
                 <div class="span4"><h2 class="form-signin-heading" style="color: dimgray">New article</h2>
 
                     <table>
@@ -85,11 +85,6 @@
             </form>
             <div align="center">
                 <BR>
-                <form action="/select_tag">
-                    <div align="left">
-                        <button class="btn btn-default btn-inverse" style="margin-left: 25px" type="submit">Add tags</button>
-                    </div>
-                </form>
             </div>
 
             <div align="center">
@@ -106,7 +101,7 @@
                 </p>
             </div>
             <br>
-            <button class="btn btn-default btn-inverse" style="margin-left: 25px" type="submit">Submit</button>
+            <button class="btn btn-default btn-inverse" style="margin-left: 25px" type="submit">Next</button>
             <br>
         </div>
     </div>

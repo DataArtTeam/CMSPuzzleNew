@@ -1,9 +1,10 @@
-package servlets;
+package servlets.authorisation;
 
 
 import hibernate.dao.UserDao;
 import hibernate.daoImpl.UserDaoImpl;
 import hibernate.tables.User;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/userlist")
-public class UserListServlet extends ServletProvider{
+public class UserListServlet extends ServletProvider {
     private static final String pageName = "/userList.jsp";
     private static final String CONTENT_TYPE = "text/html";
     public ArrayList<User> userList;

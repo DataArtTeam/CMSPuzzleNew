@@ -1,4 +1,4 @@
-package servlets;
+package servlets.status;
 
 import hibernate.dao.ContentDao;
 import hibernate.dao.UserDao;
@@ -7,6 +7,7 @@ import hibernate.daoImpl.UserDaoImpl;
 import hibernate.tables.Content;
 import hibernate.tables.User;
 import hibernate.tables.userInfo.UserRole;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/editstatus")
-public class ContentStatusServlet extends ServletProvider{
+public class ContentStatusServlet extends ServletProvider {
 
     private static final String pageName = "/articleStatusEdit.jsp";
     private static final String CONTENT_TYPE = "text/html";

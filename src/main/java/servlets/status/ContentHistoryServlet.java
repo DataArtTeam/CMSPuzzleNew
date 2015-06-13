@@ -1,4 +1,4 @@
-package servlets;
+package servlets.status;
 
 
 import hibernate.dao.ContentDao;
@@ -7,6 +7,7 @@ import hibernate.daoImpl.ContentDaoImpl;
 import hibernate.daoImpl.ContentPositionHistoryDaoImpl;
 import hibernate.tables.Content;
 import hibernate.tables.ContentPositionHistory;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/contenthistory")
-public class ContentHistoryServlet extends ServletProvider{
+public class ContentHistoryServlet extends ServletProvider {
     private static final String pageName = "/contentHistory.jsp";
     private static final String CONTENT_TYPE = "text/html";
     private static final String KEY_CONTENT_HISTORY = "contentHistory";

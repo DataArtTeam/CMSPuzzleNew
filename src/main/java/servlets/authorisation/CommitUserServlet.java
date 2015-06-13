@@ -1,4 +1,4 @@
-package servlets;
+package servlets.authorisation;
 
 
 import context.UserSession;
@@ -7,6 +7,7 @@ import hibernate.daoImpl.UserDaoImpl;
 import hibernate.general.HibernateFactory;
 import hibernate.tables.User;
 import hibernate.tables.userInfo.UserRole;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

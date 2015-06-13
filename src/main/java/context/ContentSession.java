@@ -25,7 +25,7 @@ public class ContentSession {
         return contentSession;
     }
 
-    private void createContentSession(String name, String title,  String text, String description,
+    public void createContentSession(String name, String title,  String text, String description,
                                       String keywords, String link, String image){
         this.name = name;
         this.title = title;

@@ -1,9 +1,10 @@
-package servlets;
+package servlets.tags;
 
 import controllers.TagListSingleton;
 import hibernate.dao.TagDao;
 import hibernate.daoImpl.TagDaoImpl;
 import hibernate.tables.Tag;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +15,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 @WebServlet("/selectTags")
-public class SelectedTagsControllers extends ServletProvider{
+public class SelectedTagsControllers extends ServletProvider {
 
     private static final String pageName = "/content_view.jsp";
     private static final String CONTENT_TYPE = "text/html";

@@ -1,8 +1,9 @@
-package servlets;
+package servlets.content;
 
 import hibernate.dao.ContentDao;
 import hibernate.daoImpl.ContentDaoImpl;
 import hibernate.tables.Content;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

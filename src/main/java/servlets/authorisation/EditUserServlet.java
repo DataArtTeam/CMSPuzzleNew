@@ -1,4 +1,4 @@
-package servlets;
+package servlets.authorisation;
 
 import context.UserSession;
 import hibernate.dao.UserDao;
@@ -6,6 +6,7 @@ import hibernate.daoImpl.UserDaoImpl;
 import hibernate.general.HibernateFactory;
 import hibernate.tables.User;
 import hibernate.tables.userInfo.UserRole;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +17,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet("/edituser")
-public class EditUserServlet extends ServletProvider{
+public class EditUserServlet extends ServletProvider {
 
 
     private static final String PAGE_EDIT_USER = "editUser.jsp";

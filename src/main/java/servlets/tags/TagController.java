@@ -1,8 +1,9 @@
-package servlets;
+package servlets.tags;
 
 import hibernate.tables.Tag;
 import hibernate.dao.TagDao;
 import hibernate.daoImpl.TagDaoImpl;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/tags")
-public class TagController extends ServletProvider{
+public class TagController extends ServletProvider {
     private static final String pageName = "/tagsList.jsp";
     private static final String CONTENT_TYPE = "text/html";
 

@@ -1,9 +1,10 @@
-package servlets;
+package servlets.content;
 
 import context.ContentList;
 import hibernate.dao.ContentDao;
 import hibernate.daoImpl.ContentDaoImpl;
 import hibernate.tables.Content;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/article_list")
-public class ContentListServlet extends ServletProvider{
+public class ContentListServlet extends ServletProvider {
 
     private static final String pageName = "/contentList.jsp";
     private static final String CONTENT_TYPE = "text/html";

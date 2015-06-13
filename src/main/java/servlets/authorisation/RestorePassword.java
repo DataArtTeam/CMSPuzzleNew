@@ -1,4 +1,4 @@
-package servlets;
+package servlets.authorisation;
 
 import hibernate.dao.UserDao;
 import hibernate.general.HibernateFactory;
@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import authorization.EmailValidate;
+import servlets.authorisation.ServletUtil;
 
 @WebServlet("/restorePassword")
 public class RestorePassword extends HttpServlet {

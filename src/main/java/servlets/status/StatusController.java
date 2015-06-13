@@ -1,4 +1,4 @@
-package servlets;
+package servlets.status;
 
 import context.UserSession;
 import hibernate.dao.ContentDao;
@@ -9,6 +9,7 @@ import hibernate.tables.Content;
 import context.ArticleStatus;
 import hibernate.tables.ContentPositionHistory;
 import hibernate.tables.User;
+import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

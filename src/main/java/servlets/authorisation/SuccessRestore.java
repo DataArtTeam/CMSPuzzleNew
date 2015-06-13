@@ -1,4 +1,4 @@
-package servlets;
+package servlets.authorisation;
 
 import hibernate.dao.UserDao;
 import hibernate.general.HibernateFactory;
@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import authorization.PasswordHash;
+import servlets.authorisation.ServletUtil;
 
 @WebServlet(name = "successRestore", urlPatterns = { "/successRestore" })
 public class SuccessRestore extends HttpServlet {

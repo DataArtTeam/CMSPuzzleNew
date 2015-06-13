@@ -1,4 +1,4 @@
-package servlets;
+package servlets.authorisation;
 
 import context.UserSession;
 import hibernate.dao.UserDao;

@@ -1,4 +1,4 @@
-package servlets;
+package servlets.images;
 
 
 import javax.servlet.ServletOutputStream;
