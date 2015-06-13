@@ -1,15 +1,11 @@
 package hibernate.tables;
 
+import context.ArticleStatus;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import javax.persistence.Table;
 
 @Entity
@@ -35,6 +31,20 @@ public class ContentPositionHistory implements Serializable, hibernate.tables.Ta
 	@JoinColumn(name = "cph_user")			//field name in table
 	private User userId;
 
+    @Enumerated(EnumType.STRING)
+    @Column (columnDefinition="enum('AUTHOR','CORRECTOR', 'EDITOR', 'DELETED', 'WEBSITE')", name="cph_status")
+    private ArticleStatus status;
+
+    public ContentPositionHistory(){
+
+    }
+
+    public ContentPositionHistory(Content content, User user, ArticleStatus status, Timestamp date){
+        this.userId = user;
+        this.contentId = content;
+        this.status = status;
+        this.date = date;
+    }
 	public Integer getId() {
 		return id;
 	}
@@ -63,6 +73,9 @@ public class ContentPositionHistory implements Serializable, hibernate.tables.Ta
 		this.userId = userId;
 	}
 
+    public ArticleStatus getStatus(){
+        return status;
+    }
 	@Override
 	public int hashCode() {
 		final int prime = 31;

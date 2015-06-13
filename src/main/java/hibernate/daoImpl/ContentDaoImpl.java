@@ -13,13 +13,11 @@ public class ContentDaoImpl implements ContentDao{
 	}
 
 	public Content getContent(int id) throws SQLException {
-		//return (Content)HibernateDaoBuilder.getTableValue(id, new Content());
-        return null;
+		return (Content)HibernateDaoBuilder.getTableValue(id, new Content());
 	}
 
 	public List<Content> getContents() throws SQLException {
-		//return (List<Content>)HibernateDaoBuilder.getTableValues(new Content());
-        return null;
+		return (List<Content>)HibernateDaoBuilder.getTableValues(new Content());
 	}
 
 	public void deleteContent(Content content) throws SQLException {

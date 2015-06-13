@@ -1,6 +1,5 @@
 package controllers;
 
-import context.ArticleList;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,10 +12,11 @@ public class MainPageController {
     @RequestMapping(method = RequestMethod.GET)
     public @ResponseBody
     String getAllArticlesFromMainPage() {
-
-        ArticleList articleList = ArticleList.getArticleList();
-        String articleJSON = articleList.getArticlesInString();
-
-        return articleJSON;
-    }
+//
+//        ArticleList articleList = ArticleList.getArticleList();
+//        String articleJSON = articleList.getArticlesInString();
+//
+//        return articleJSON;
+    return "";
+   }
 }

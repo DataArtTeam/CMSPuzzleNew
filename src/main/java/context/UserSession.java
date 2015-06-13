@@ -1,8 +1,15 @@
 package context;
 
+import hibernate.dao.UserDao;
+import hibernate.daoImpl.UserDaoImpl;
+import hibernate.tables.User;
 import hibernate.tables.userInfo.UserRole;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import javax.jws.soap.SOAPBinding;
+import java.sql.SQLException;
+import java.util.List;
 
 public class UserSession implements ContextObject {
 
@@ -21,7 +28,7 @@ public class UserSession implements ContextObject {
 
     }
 
-    public static synchronized UserSession getUser(){
+    public static synchronized UserSession getUserSession(){
         if (userSessionInst == null){
             userSessionInst = new UserSession();
         }
@@ -67,23 +74,26 @@ public class UserSession implements ContextObject {
         this.role = role;
     }
 
-    public String getFirstName(){
-        return firstName;
-    }
-
-    public String getLastName(){
-        return lastName;
-    }
-
-    public String getUsername(){
-        return userName;
-    }
-
     public Integer getUserID(){
         return userID;
     }
 
-    public void setStatus(UserStatus userStatus){
+    public User getUser(){
 
+        User user = null;
+        UserDao userDao = new UserDaoImpl();
+        try {
+            List<User> users = userDao.getUsers();
+            if(users != null){
+                if (users.size() > 0){
+                 user = users.get(0);
+                }
+            }
+        }
+        catch (SQLException e){
+
+        }
+
+        return user;
     }
 }

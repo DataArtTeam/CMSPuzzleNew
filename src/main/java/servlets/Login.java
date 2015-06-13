@@ -92,7 +92,7 @@ public class Login extends HttpServlet {
 	}
 
     private void fillUserSession(String login, String firstName, String lastName, UserRole userRole, Integer id){
-        UserSession userSession = UserSession.getUser();
+        UserSession userSession = UserSession.getUserSession();
         userSession.fillUserAttribute(login, firstName, lastName, userRole, id);
     }
 }

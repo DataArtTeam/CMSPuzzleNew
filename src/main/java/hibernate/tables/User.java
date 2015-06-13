@@ -2,6 +2,8 @@ package hibernate.tables;
 
 import hibernate.tables.userInfo.UserRole;
 import hibernate.tables.userInfo.UserStatus;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.Serializable;
 import java.security.NoSuchAlgorithmException;
@@ -21,8 +23,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "users")
 public class User implements Serializable, hibernate.tables.Table{
-	
-	private static final long serialVersionUID = -1698226571037727021L;
+
+    private static final String KEY_NAME = "name";
+    private static final String KEY_FIRST_NAME = "firstname";
+    private static final String KEY_LAST_NAME = "lastname";
+
+    private static final long serialVersionUID = -1698226571037727021L;
 	@Id
 	@Column(name = "u_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -205,5 +211,19 @@ public class User implements Serializable, hibernate.tables.Table{
 			return false;
 		return true;
 	}
+
+    public JSONObject createFullJSON() {
+        try {
+            JSONObject userJSON = new JSONObject();
+            userJSON.put(KEY_NAME, login);
+            userJSON.put(KEY_FIRST_NAME, firstName);
+            userJSON.put(KEY_LAST_NAME, lastName);
+            return userJSON;
+        }
+        catch (JSONException e){
+            return null;
+
+        }
+    }
 
 }

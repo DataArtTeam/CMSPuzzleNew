@@ -58,7 +58,7 @@ public class CommitUserServlet  extends ServletProvider {
     }
 
     private void setNewRole(User user){
-        UserSession userSession = UserSession.getUser();
+        UserSession userSession = UserSession.getUserSession();
         userSession.setRole(UserRole.valueOf(newRole));
         user.setRole(UserRole.valueOf(newRole));
         UserDao userDao = new UserDaoImpl();

@@ -1,10 +1,14 @@
 package servlets;
 
-import context.Article;
-import hibernate.dao.ArticleDao;
-import hibernate.daoImpl.ArticleDOAImpl;
+import context.UserSession;
+import hibernate.dao.ContentDao;
+import hibernate.dao.ContentPositionHistoryDao;
+import hibernate.daoImpl.ContentDaoImpl;
+import hibernate.daoImpl.ContentPositionHistoryDaoImpl;
 import hibernate.tables.Content;
 import context.ArticleStatus;
+import hibernate.tables.ContentPositionHistory;
+import hibernate.tables.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.Calendar;
 import java.util.List;
 
 @WebServlet("/changeStatus")
@@ -23,7 +29,7 @@ public class StatusController extends ServletProvider {
     private static final String KEY_STATUS = "status";
 
     private String id;
-    Article article;
+    Content content;
     ArticleStatus articleStatus;
 
     @Override
@@ -34,9 +40,10 @@ public class StatusController extends ServletProvider {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         getRequestParam(request);
-        article = getArticle();
-        article.setStatus(articleStatus);
+        content = getContent();
+        content.setArticleStatus(articleStatus);
         commitChanges();
+        addToHistory();
         response.setContentType(CONTENT_TYPE);
         super.forwardRequest(request, response, pageName);
     }
@@ -46,31 +53,46 @@ public class StatusController extends ServletProvider {
         articleStatus = ArticleStatus.valueOf(request.getParameter(KEY_STATUS));
     }
 
-    private Article getArticle(){
-        ArticleDao articleDao = new ArticleDOAImpl();
+    private Content getContent(){
+        ContentDao contentDao = new ContentDaoImpl();
         try {
             Integer idInteger = new Integer(id);
-            List<Content> contents = articleDao.getContentsByProperty("id", idInteger);
+            List<Content> contents = contentDao.getContentsByProperty("id", idInteger);
             if(contents.size() > 0){
-                Content content = contents.get(0);
-                article = articleDao.convertToArticle(content);
+                content = contents.get(0);
             }
         }
         catch (SQLException e){
-            article = null;
+            content = null;
         }
-        return article;
+        return content;
     }
 
     private void commitChanges(){
-        ArticleDao articleDao = new ArticleDOAImpl();
+        ContentDao contentDao = new ContentDaoImpl();
         try {
-            Content content = articleDao.convertToContent(article);
-            articleDao.updateContent(content);
+            contentDao.updateContent(content);
         }
         catch (SQLException e){
 
         }
     }
+
+    private void addToHistory(){
+        User user = UserSession.getUserSession().getUser();
+        Timestamp date = new Timestamp(Calendar.getInstance().getTimeInMillis());
+
+        ContentPositionHistory contentPositionHistory = new ContentPositionHistory(content, user, articleStatus, date);
+        try {
+            ContentPositionHistoryDao contentPosition = new ContentPositionHistoryDaoImpl();
+            contentPosition.addContentPositionHistory(contentPositionHistory);
+        }
+        catch (SQLException e){
+
+        }
+
+    }
+
+
 }
 

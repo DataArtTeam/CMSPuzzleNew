@@ -1,10 +1,15 @@
 package context;
 
 
+import hibernate.dao.TagDao;
+import hibernate.daoImpl.TagDaoImpl;
+import hibernate.tables.Tag;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListTags {
 
@@ -42,22 +47,17 @@ public class ListTags {
     }
 
     public ArrayList<Tag> getAllTags(){
+        ArrayList<Tag> tags = new ArrayList<>();
+        TagDao tagDao = new TagDaoImpl();
+        try {
+            List<Tag> tagList =tagDao.getTags();
+            for (Tag tag: tagList){
+                tags.add(tag);
+            }
+        }
+        catch (SQLException e){
 
-        ArrayList<Tag> tags = new ArrayList<Tag>();
-
-        Tag forestTag = new Tag(1, "forest");
-        Tag worldTag = new Tag(2, "world");
-        Tag delicacyTag = new Tag(6, "delicacy");
-        Tag provenceTag = new Tag(3, "Provence");
-        Tag franceTag   = new Tag(4, "France");
-
-        tags.add(forestTag);
-        tags.add(worldTag);
-        tags.add(delicacyTag);
-        tags.add(provenceTag);
-        tags.add(franceTag);
-
+        }
         return tags;
-
     }
 }

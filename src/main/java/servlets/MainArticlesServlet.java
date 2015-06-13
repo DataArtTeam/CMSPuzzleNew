@@ -1,6 +1,5 @@
 package servlets;
 
-import context.Article;
 import hibernate.tables.Content;
 
 import javax.servlet.ServletException;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 @WebServlet("/mainarticles")
 public class MainArticlesServlet extends ServletProvider{
 
-    private static final String pageName = "/articleList.jsp";
+    private static final String pageName = "/contentList.jsp";
     private static final String CONTENT_TYPE = "text/html";
     public ArrayList<Content> contentList;
 

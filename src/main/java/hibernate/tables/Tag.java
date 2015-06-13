@@ -1,5 +1,8 @@
 package hibernate.tables;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.Serializable;
 import java.util.Set;
 
@@ -15,6 +18,9 @@ import javax.persistence.OneToMany;
 @Table(name = "tag")
 public class Tag implements Serializable, hibernate.tables.Table{
 	private static final long serialVersionUID = 1470698910064304556L;
+    private static final String KEY_ID = "id";
+    private static final String KEY_NAME = "name";
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "t_id")
@@ -52,6 +58,25 @@ public class Tag implements Serializable, hibernate.tables.Table{
 	public Set<ContentTagLinker> getTags() {
 		return tags;
 	}
+
+    public String getStringJSON() {
+
+        String tagInString = getTagInJSON().toString();
+        return tagInString;
+
+    }
+
+    public JSONObject getTagInJSON(){
+        try {
+            JSONObject tagJSON = new JSONObject();
+            tagJSON.put(KEY_ID, id);
+            tagJSON.put(KEY_NAME, name);
+            return tagJSON;
+        }
+        catch (JSONException e){
+            return null;
+        }
+    }
 
 	@Override
 	public String toString() {

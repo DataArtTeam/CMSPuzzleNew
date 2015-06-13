@@ -24,7 +24,7 @@ public class ImagineServlet extends HttpServlet {
 
     private void getFullImagePath(){
         StringBuffer imagePassBufer = new StringBuffer();
-        imagePassBufer.append("D:\\pngcms\\");
+        imagePassBufer.append("D:\\CMS\\png\\");
         imagePassBufer.append(imageName);
         imagePass = imagePassBufer.toString();
     }

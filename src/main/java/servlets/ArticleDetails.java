@@ -1,8 +1,7 @@
 package servlets;
 
-import context.Article;
-import hibernate.dao.ArticleDao;
-import hibernate.daoImpl.ArticleDOAImpl;
+import hibernate.dao.ContentDao;
+import hibernate.daoImpl.ContentDaoImpl;
 import hibernate.tables.Content;
 
 import javax.servlet.ServletException;
@@ -22,13 +21,13 @@ public class ArticleDetails extends ServletProvider {
     private static final String KEY_ID = "id";
 
     private String id;
-    Article article;
+    Content content;
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         getRequestParam(request);
-        article = getArticle();
-        setParameters(request, article);
+        content = getContent();
+        setParameters(request, content);
         response.setContentType(CONTENT_TYPE);
         super.forwardRequest(request, response, pageName);
     }
@@ -37,28 +36,27 @@ public class ArticleDetails extends ServletProvider {
         id = request.getParameter(KEY_ID);
     }
 
-    private void setParameters(HttpServletRequest request, Article article){
-        request.getSession().setAttribute("name", article.getName());
-        request.getSession().setAttribute("title", article.getTitle());
-        request.getSession().setAttribute("keywords", article.getKeyWords());
-        request.getSession().setAttribute("description", article.getDescription());
-        request.getSession().setAttribute("text", article.getDescription());
+    private void setParameters(HttpServletRequest request, Content content){
+        request.getSession().setAttribute("name", content.getName());
+        request.getSession().setAttribute("title", content.getTitle());
+        request.getSession().setAttribute("keywords", content.getKeywordsOfTags());
+        request.getSession().setAttribute("description", content.getDescriptionOfContent());
+        request.getSession().setAttribute("text", content.getText());
     }
 
-    private Article getArticle(){
-        ArticleDao articleDao = new ArticleDOAImpl();
+    private Content getContent(){
+        ContentDao articleDao = new ContentDaoImpl();
         try {
             Integer idInteger = new Integer(id);
             List<Content> contents = articleDao.getContentsByProperty("id", idInteger);
             if(contents.size() > 0){
-                Content content = contents.get(0);
-                article = articleDao.convertToArticle(content);
+                content = contents.get(0);
             }
         }
         catch (SQLException e){
-            article = null;
+            content = null;
         }
-        return article;
+        return content;
     }
 
 }

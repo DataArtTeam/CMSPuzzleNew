@@ -1,9 +1,12 @@
 package hibernate.tables;
 
 import context.ArticleStatus;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -12,23 +15,46 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "content")
 public class Content implements Serializable, hibernate.tables.Table {
+
     private static final long serialVersionUID = -5284963386489685478L;
+    private static final String KEY_NAME            = "name";
+    private static final String KEY_ID              = "id";
+    private static final String KEY_DESCRIPTION     = "description";
+    private static final String KEY_CREATED         = "created";
+    private static final String KEY_URL             = "url";
+    private static final String KEY_TAGS            = "tags";
+    private static final String KEY_AUTHOR          = "author";
+    private static final String KEY_TEXT            = "text";
+    private static final String KEY_TITLE           = "title";
+    private static final String KEY_DESCR           = "descr";
+    private static final String KEY_REVIEW          = "review";
+    private static final String KEY_IMG             = "img";
+    private static final String KEY_KWDS            = "kwds";
+    private static final String KEY_SIMILAR         = "similar";
+
     @Id
     @Column(name = "c_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     @Column(name = "c_name")
     private String name;
+
     @Column(name = "title")
     private String title;
+
     @Column(name = "c_kwds")
     private String keywordsOfTags;
+
     @Column(name = "c_description_tags")
     private String descriptionOfTags;
+
     @Column(name = "c_img")
     private String image;
+
     @Column(name = "c_description_content")
     private String descriptionOfContent;
+
     @Column(name = "c_text")
     private String text;
 
@@ -40,8 +66,10 @@ public class Content implements Serializable, hibernate.tables.Table {
 
     @Column(name = "c_created")
     private Timestamp created;
+
     @Column(name = "c_lastedit")
     private Timestamp lastEdit;
+
     @Column(name = "c_url")
     private String url;
 
@@ -55,27 +83,32 @@ public class Content implements Serializable, hibernate.tables.Table {
     @OneToMany(mappedBy = "contentId")		// reference on field in object FrontPage
     private Set<FrontPage> frontPages;
 
+    private ArrayList<Tag> tags;
+
+    private String descr;
+
 //	@OneToMany(mappedBy = "content") 		// reference on field in object ContentPosition
 //	private Set<ContentTagLinker> contents;
 
     public Content(){
 
     }
-    public Content(Integer id, String name, String title, String keywordsOfTags, String descriptionOfTags, String image, String descriptionOfContent,
-                   String text, Byte status, Timestamp created, Timestamp lastEdit, String url, ArticleStatus articleStatus){
-        this.id = id;
+    public Content(String name, String title, ArrayList<Tag> tags, String image, String descriptionOfContent,
+                   String text, Timestamp created, String url, ArticleStatus articleStatus, User author){
         this.name = name;
         this.title = title;
         this.keywordsOfTags = keywordsOfTags;
-        this.descriptionOfTags = descriptionOfTags;
+        //this.descriptionOfTags = descriptionOfTags;
         this.descriptionOfContent = descriptionOfContent;
         this.image = image;
         this.text = text;
-        this.status = status;
+        //this.status = status;
         this.created = created;
-        this.lastEdit = lastEdit;
+        //this.lastEdit = lastEdit;
         this.url = url;
         this.articleStatus = articleStatus;
+        this.author = author;
+        this.tags = tags;
     }
 
     @Column(name = "c_review_count")
@@ -205,6 +238,9 @@ public class Content implements Serializable, hibernate.tables.Table {
         return articleStatus;
     }
 
+    public void setArticleStatus(ArticleStatus articleStatus){
+        this.articleStatus = articleStatus;
+    }
     @Override
     public String toString() {
         return new StringBuffer().append("Content [id=").append(id)
@@ -223,6 +259,106 @@ public class Content implements Serializable, hibernate.tables.Table {
                 .append(", reviewCount=").append(reviewCount)
                 .append("]").toString();
     }
+
+    public JSONObject createFullJSON() {
+
+        try {
+            JSONObject articleData = new JSONObject();
+            articleData.put(KEY_ID,            id);
+            articleData.put(KEY_NAME,          name);
+            articleData.put(KEY_DESCRIPTION,   descriptionOfContent);
+            articleData.put(KEY_CREATED,       created);
+            articleData.put(KEY_URL,           url);
+            articleData.put(KEY_IMG,           image);
+            //articleData.put(KEY_REVIEW,        review);
+            articleData.put(KEY_TAGS,          getTagsName());
+            articleData.put(KEY_AUTHOR,        author.getFirstName());
+            articleData.put(KEY_TEXT,          text);
+            articleData.put(KEY_TITLE,         title);
+            articleData.put(KEY_KWDS,          keywordsOfTags);
+            articleData.put(KEY_DESCR,         descr);
+            articleData.put(KEY_SIMILAR,       getSimilarContext());
+
+
+            return articleData;
+        }
+        catch (JSONException e){
+            return null;
+        }
+
+    }
+
+    private ArrayList<JSONObject> getTagsName(){
+
+        ArrayList<JSONObject> tagsName = new ArrayList<JSONObject>();
+
+        for (Tag tag: tags){
+            tagsName.add(tag.getTagInJSON());
+        }
+
+        return tagsName;
+    }
+
+    private ArrayList<Content> getSimilarContext(){
+        return null;
+    }
+
+    public String getStringJSON(int mode) {
+        JSONObject articleInJSON;
+
+        if(mode == 0){
+            articleInJSON = createFullJSON();
+        }
+        else {
+            articleInJSON = createAbbreviatedJSON();
+        }
+
+        String articleInString = articleInJSON.toString();
+
+        return articleInString;
+    }
+
+    public JSONObject createJSONObjectForSimilar(){
+
+        try {
+
+            JSONObject articleData = new JSONObject();
+            articleData.put(KEY_ID,            id);
+            articleData.put(KEY_NAME,          name);
+            articleData.put(KEY_CREATED,       created);
+            articleData.put(KEY_IMG,           image);
+            articleData.put(KEY_URL,           url);
+
+            return articleData;
+        }
+        catch (JSONException e){
+            return null;
+        }
+
+    }
+
+    public JSONObject createAbbreviatedJSON(){
+        try {
+
+            JSONObject articleData = new JSONObject();
+            articleData.put(KEY_ID,            id);
+            articleData.put(KEY_NAME,          name);
+            articleData.put(KEY_DESCRIPTION,   descriptionOfContent);
+            articleData.put(KEY_CREATED,       created);
+            articleData.put(KEY_URL,           url);
+            articleData.put(KEY_IMG,           image);
+           // articleData.put(KEY_REVIEW,        review);
+            articleData.put(KEY_TAGS,          getTagsName());
+            articleData.put(KEY_AUTHOR,        author.createFullJSON());
+
+            return articleData;
+        }
+        catch (JSONException e){
+            return null;
+        }
+    }
+
+
 
     @Override
     public int hashCode() {
