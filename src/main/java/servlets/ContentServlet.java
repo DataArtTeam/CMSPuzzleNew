@@ -26,7 +26,7 @@ import java.util.List;
 
 @WebServlet("/createArticle")
 public class ContentServlet extends ServletProvider {
-    private static final String pageName = "/articlelist";
+    private static final String pageName = "/article_list";
     private static final String CONTENT_TYPE = "text/html";
 
     private static final String KEY_TEXT = "text";

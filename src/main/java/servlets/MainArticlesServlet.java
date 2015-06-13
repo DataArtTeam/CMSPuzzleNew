@@ -19,7 +19,7 @@ public class MainArticlesServlet extends ServletProvider{
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         fillContentTable();
-        request.getSession().setAttribute("articleList", contentList);
+        request.getSession().setAttribute("article_list", contentList);
         response.setContentType(CONTENT_TYPE);
         super.forwardRequest(request, response, pageName);
     }

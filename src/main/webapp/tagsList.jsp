@@ -28,9 +28,9 @@
 </script>
 <nav class="pushy pushy-left">
     <ul>
-        <li><a href="/articlelist">Materials</a></li>
+        <li><a href="/article_list">Materials</a></li>
         <li><a href="/userlist">Users</a></li>
-        <li><a href="/mainarticles">Main materials</a></li>
+        <li><a href="/front">Front page</a></li>
         <li><a href="/tags">Tags</a></li>
     </ul>
 </nav>

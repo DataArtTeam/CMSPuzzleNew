@@ -1,5 +1,6 @@
 D:\CMS\puzzle\src\main\java\servlets\ContentServlet.java
 D:\CMS\puzzle\src\main\java\servlets\Login.java
+D:\CMS\puzzle\src\main\java\servlets\FrontPageServlet.java
 D:\CMS\puzzle\src\main\java\hibernate\daoImpl\UserDaoImpl.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\TagDao.java
 D:\CMS\puzzle\src\main\java\controllers\TagSearchController.java
@@ -13,9 +14,9 @@ D:\CMS\puzzle\src\main\java\hibernate\tables\FrontPage.java
 D:\CMS\puzzle\src\main\java\servlets\ArticleDetails.java
 D:\CMS\puzzle\src\main\java\hibernate\exception\SavingException.java
 D:\CMS\puzzle\src\main\java\hibernate\tables\userInfo\UserStatus.java
+D:\CMS\puzzle\src\main\java\servlets\SelectedTagsControllers.java
 D:\CMS\puzzle\src\main\java\context\ListTags.java
 D:\CMS\puzzle\src\main\java\servlets\ServletUtil.java
-D:\CMS\puzzle\src\main\java\servlets\CheckTagsControllers.java
 D:\CMS\puzzle\src\main\java\hibernate\daoImpl\ContentTagLinkerDaoImpl.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\ContentTagLinkerDao.java
 D:\CMS\puzzle\src\main\java\hibernate\daoImpl\FrontPageDaoImpl.java
@@ -52,6 +53,7 @@ D:\CMS\puzzle\src\main\java\context\ContextObject.java
 D:\CMS\puzzle\src\main\java\servlets\ImagineServlet.java
 D:\CMS\puzzle\src\main\java\servlets\Registration.java
 D:\CMS\puzzle\src\main\java\servlets\StatusController.java
+D:\CMS\puzzle\src\main\java\servlets\FrontPageController.java
 D:\CMS\puzzle\src\main\java\access\AccessProvider.java
 D:\CMS\puzzle\src\main\java\context\PaginationBuilder.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\ContentDao.java

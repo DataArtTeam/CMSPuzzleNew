@@ -92,7 +92,7 @@
 </form>
 
 <div align="right">
-    <form action="/articlelist" method="get">
+    <form action="/article_list" method="get">
         <button><b>Close</b></button>
     </form>
 </div>

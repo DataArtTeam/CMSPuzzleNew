@@ -70,7 +70,7 @@
                         </tr>
                         <tr>
                             <th></th>
-                            <th>Link <input type="text" name="link" class="input-block-level"></th>
+                            <th>Reference <input type="text" name="link" class="input-block-level"></th>
                         </tr>
                         <tr>
                             <th></th>
@@ -85,7 +85,7 @@
             </form>
             <div align="center">
                 <BR>
-                <form action="/checktag">
+                <form action="/select_tag">
                     <div align="left">
                         <button class="btn btn-default btn-inverse" style="margin-left: 25px" type="submit">Add tags</button>
                     </div>
@@ -113,7 +113,7 @@
 </div>
 <br>
 <div align="left">
-    <form action="/articlelist" method="get">
+    <form action="/article_list" method="get">
         <%TagListSingleton.getTagList().deleteInstance();%>
         <button class="btn btn-default btn-inverse" style="margin-left: 25px" type="submit">Close</button>
     </form>

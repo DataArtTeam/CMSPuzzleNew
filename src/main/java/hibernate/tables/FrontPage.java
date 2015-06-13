@@ -28,6 +28,15 @@ public class FrontPage implements Serializable, hibernate.tables.Table{
 	@Column(name="f_order")
 	private Integer order;
 
+    public FrontPage(){
+
+    }
+
+    public FrontPage(Content content, int order){
+        this.contentId = content;
+        this.order = order;
+    }
+
 	public Integer getId() {
 		return id;
 	}

@@ -28,9 +28,9 @@
 </script>
 <nav class="pushy pushy-left">
     <ul>
-        <li><a href="/articlelist">Materials</a></li>
+        <li><a href="/article_list">Materials</a></li>
         <li><a href="/userlist">Users</a></li>
-        <li><a href="/mainarticles">Main materials</a></li>
+        <li><a href="/front">Front page</a></li>
         <li><a href="/tags">Tags</a></li>
     </ul>
 </nav>
@@ -42,51 +42,60 @@
 </div>
 
 <div class="container" style="width: 300px;">
-    <form action="NewArticle.jsp" method="post">
+    <form action="content_view.jsp" method="post">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Add new</button>
     </form>
 </div>
 
-<div id="content_page_main_materials" class="container">
+<form action= "/add_to_front" method="get">
 
-    <div class="row" style="height: 20px"></div>
-    <table class="table table-striped">
-        <tr>
-            <th>Title</th>
-            <th>Preview</th>
-            <th>Author</th>
-            <th>History</th>
-            <th>Next step</th>
-            <th>Status</th>
-        </tr>
-        <tbody>
+    <div class="container" style="width: 300px;">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Add to front page</button>
+    </div>
 
-        <% ArrayList<Content> contentList= (ArrayList) session.getAttribute("contentList");
-            for(Content content: contentList) {%>
+    <div id="content_page_main_materials" class="container">
 
-        <tr>
-            <%String statusRef = "/editstatus?id="+ content.getId();
-            String historyRef = "/contenthistory?contentId=" + content.getId();%>
-            <th><a href= <%out.print(content.getUrl());%>><%out.print(content.getTitle());%></a></th>
-            <th><% out.print(content.getDescriptionOfContent());%></th>
-            <th><% out.print(content.getAuthor().getLogin());%></th>
-            <th><a href=<%out.print(historyRef);%>> show history</a></th>
-            <th><a href=<%out.print(statusRef);%>> finish working with article</a></th>
-            <th><% out.print(content.getArticleStatus());%></th>
-        </tr>
+        <div class="row" style="height: 20px"></div>
+        <table class="table table-striped">
+            <tr>
+                <th>Select</th>
+                <th>Title</th>
+                <th>Preview</th>
+                <th>Author</th>
+                <th>History</th>
+                <th>Next step</th>
+                <th>Status</th>
+            </tr>
+            <tbody>
 
-        <%}%>
-        </tbody>
-    </table>
-</div>
+            <% ArrayList<Content> contentList= (ArrayList) session.getAttribute("contentList");
+                for(Content content: contentList) {%>
+
+            <tr>
+                <%String statusRef = "/editstatus?id="+ content.getId();
+                    String historyRef = "/contenthistory?contentId=" + content.getId();%>
+                <th><input type="checkbox" name="contentList" value=<%out.print(content.getId());%> ></th>
+                <th><a href= <%out.print(content.getUrl());%>><%out.print(content.getTitle());%></a></th>
+                <th><% out.print(content.getDescriptionOfContent());%></th>
+                <th><% out.print(content.getAuthor().getLogin());%></th>
+                <th><a href=<%out.print(historyRef);%>> show history</a></th>
+                <th><a href=<%out.print(statusRef);%>> finish working with article</a></th>
+                <th><% out.print(content.getArticleStatus());%></th>
+            </tr>
+
+            <%}%>
+            </tbody>
+        </table>
+    </div>
+</form>
 <%int pageAmount = (Integer) session.getAttribute("pageAmount");
     int currentPage = 2;
 %>
 <div class="paginator text-center">
     <ul class="pagination">
-        <li><a href="/articlelist?page=1">1</a></li>
+        <li><a href="/article_list?page=1">1</a></li>
         <%while (currentPage <= pageAmount){
-            String ref = "/articlelist?page=" + currentPage;%>
+            String ref = "/article_list?page=" + currentPage;%>
         <li><a href=<%out.print(ref);%>><%out.print(currentPage);%></a></li>
         <%currentPage++;}%>
     </ul>

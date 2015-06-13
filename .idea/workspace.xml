@@ -2,9 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab5d17b-37bf-4ad5-a29a-3e8e8b781036" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/NewArticle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/NewArticle.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/RestorePassword.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/RestorePassword.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/restorePassword.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/restorePassword.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/servlets/FrontPageController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/front_page.jsp" />
+      <change type="DELETED" beforePath="D:\CMS\puzzle\src\main\webapp\content_page.jsp" afterPath="" />
+      <change type="DELETED" beforePath="D:\CMS\puzzle\src\main\webapp\mainArticles.jsp" afterPath="" />
+      <change type="DELETED" beforePath="D:\CMS\puzzle\target\Puzzle\WEB-INF\classes\servlets\CheckTagsControllers.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\CMS\puzzle\target\Puzzle\checkTag.jsp" afterPath="" />
+      <change type="DELETED" beforePath="D:\CMS\puzzle\target\Puzzle\content_page.jsp" afterPath="" />
+      <change type="DELETED" beforePath="D:\CMS\puzzle\target\Puzzle\mainArticles.jsp" afterPath="" />
+      <change type="DELETED" beforePath="D:\CMS\puzzle\target\classes\servlets\CheckTagsControllers.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/CheckTagServlet.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/CheckTagServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/CheckTagServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/CheckTagServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/ContentListServlet.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/ContentListServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/ContentListServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/ContentListServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/ContentServlet.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/ContentServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/ContentServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/ContentServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/hibernate/tables/FrontPage.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/hibernate/tables/FrontPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hibernate/tables/FrontPage.class" afterPath="$PROJECT_DIR$/target/classes/hibernate/tables/FrontPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/MainArticlesServlet.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/MainArticlesServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/MainArticlesServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/MainArticlesServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle.war" afterPath="$PROJECT_DIR$/target/Puzzle.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/RestorePassword.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/RestorePassword.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/RestorePassword.class" afterPath="$PROJECT_DIR$/target/classes/servlets/RestorePassword.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/StatusController.class" afterPath="$PROJECT_DIR$/target/Puzzle/WEB-INF/classes/servlets/StatusController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/StatusController.class" afterPath="$PROJECT_DIR$/target/classes/servlets/StatusController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/ArticleDetails.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/ArticleDetails.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/ArticleDetails.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/ArticleDetails.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/CheckTagServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/CheckTagServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/ContentListServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/ContentListServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/ContentServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/ContentServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hibernate/tables/FrontPage.java" afterPath="$PROJECT_DIR$/src/main/java/hibernate/tables/FrontPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/MainArticlesServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/MainArticlesServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/NewArticle.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/NewArticle.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/StatusController.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/StatusController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/contentHistory.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/contentHistory.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/contentHistory.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/contentHistory.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/contentList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/contentList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/contentList.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/contentList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/main.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/restorePassword.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/restorePassword.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/tagsList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/tagsList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/tagsList.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/tagsList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/userList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/userList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Puzzle/userList.jsp" afterPath="$PROJECT_DIR$/target/Puzzle/userList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\CMS\puzzle\src\main\java\servlets\CheckTagsControllers.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedTagsControllers.java" />
+      <change type="MOVED" beforePath="D:\CMS\puzzle\src\main\webapp\NewArticle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/content_view.jsp" />
+      <change type="MOVED" beforePath="D:\CMS\puzzle\src\main\webapp\checkTag.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/select_tag.jsp" />
     </list>
     <ignored path="PuzzleCMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,18 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/testLogin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/changeStatus.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/ArticleStatusControl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/Login.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/mainArticles.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/tagsList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/userList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/TagListSingltone.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/CheckTagsControllers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/context/Tag.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/tables/Tag.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/daoImpl/Tag.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/TagListSingleton.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/content_add_article.html" />
@@ -73,7 +110,6 @@
         <option value="$PROJECT_DIR$/src/main/java/servlets/ArticleListServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/daoImpl/ContentDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/daoImpl/ArticleDOAImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ArticleDetails.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/articleList.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/ImagineServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/tables/User.java" />
@@ -87,24 +123,37 @@
         <option value="$PROJECT_DIR$/src/main/java/servlets/ArticleDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/ArticleStatusServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/NewArticleServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/MainArticlesServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/ContentStatusServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/ContentListServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/context/ContentList.java" />
         <option value="$PROJECT_DIR$/src/main/java/context/PaginationBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/context/UserSession.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/ContentServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/StatusController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/articleStatusEdit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/tables/ContentPositionHistory.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/contentList.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/ContentHistoryServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/contentHistory.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/context/ContentSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/RestorePassword.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/restorePassword.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/CheckTagServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/ContentListServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/ContentServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/MainArticlesServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/StatusController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ArticleDetails.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/contentHistory.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/mainArticles.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/NewArticle.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/tables/FrontPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/MainPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/FrontPageController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/userList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/tagsList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/front_page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/contentList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/SelectedTagsControllers.java" />
       </list>
     </option>
   </component>
@@ -987,7 +1036,7 @@
       <method />
     </configuration>
     <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.61" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8090/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -999,7 +1048,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_PuzzleCMS" />
-        <option name="JNDI_PORT" value="8049" />
+        <option name="HTTP_PORT" value="8090" />
+        <option name="JNDI_PORT" value="8060" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1120,12 +1170,12 @@
       <workItem from="1434028407415" duration="5199000" />
       <workItem from="1434036916042" duration="15232000" />
       <workItem from="1434103459981" duration="10193000" />
-      <workItem from="1434120877794" duration="1604000" />
+      <workItem from="1434120877794" duration="7029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="389972000" />
+    <option name="totallyTimeSpent" value="395397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1554" height="916" extended-state="0" />
@@ -1136,7 +1186,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21485944" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21485944" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1154,7 +1204,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4535032" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2570281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2570281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299866" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -1228,8 +1278,13 @@
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlets/SelectedTagsControllers.java</url>
+          <properties />
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="205" />
+      <option name="time" value="208" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1238,131 +1293,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TagListSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.663144" vertical-offset="76" max-vertical-offset="833">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#568#569#0" expanded="false" />
-            <element signature="e#600#601#0" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-            <element signature="e#665#666#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/footer_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="757">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/header_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="757">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/content_add_article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.97075206" vertical-offset="136" max-vertical-offset="935">
-          <caret line="49" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ArticleView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="757">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ArticleDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66852367" vertical-offset="1118" max-vertical-offset="1836">
-          <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ImageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/tables/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6446499" vertical-offset="2249" max-vertical-offset="3043">
-          <caret line="217" column="40" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/context/ListTags.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47159842" vertical-offset="0" max-vertical-offset="1173">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/CheckLoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08982827" vertical-offset="0" max-vertical-offset="757">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/CheckTagsControllers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35931307" vertical-offset="0" max-vertical-offset="757">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/CheckTagServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11228534" vertical-offset="0" max-vertical-offset="757">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/CommitUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47159842" vertical-offset="0" max-vertical-offset="1139">
-          <caret line="34" column="46" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/EditUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11228534" vertical-offset="0" max-vertical-offset="782">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ImagineServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21400264" vertical-offset="195" max-vertical-offset="952">
           <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44914135" vertical-offset="0" max-vertical-offset="757">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1459,16 +1393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AllArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042394016" vertical-offset="0" max-vertical-offset="493">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ArticleDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.022849463" vertical-offset="0" max-vertical-offset="1122">
@@ -1476,14 +1400,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/MainArticlesServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24536082" vertical-offset="0" max-vertical-offset="485">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1505,16 +1421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.30241936" vertical-offset="548" max-vertical-offset="1292">
           <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ContentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1249" max-vertical-offset="2006">
-          <caret line="109" column="9" selection-start-line="103" selection-start-column="8" selection-end-line="109" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1576,36 +1482,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ContentListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15668203" vertical-offset="0" max-vertical-offset="1309">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/contentList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2896936" vertical-offset="1016" max-vertical-offset="1734">
-          <caret line="72" column="46" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/contentHistory.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66852367" vertical-offset="132" max-vertical-offset="850">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ContentHistoryServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2392473" vertical-offset="587" max-vertical-offset="1428">
           <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1654,14 +1536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/StatusController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5430108" vertical-offset="242" max-vertical-offset="1462">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/restorePassword.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42618385" vertical-offset="0" max-vertical-offset="718">
@@ -1678,10 +1552,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/NewArticle.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69220054" vertical-offset="727" max-vertical-offset="2312">
-          <caret line="72" column="41" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="757">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/CheckTagServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17068273" vertical-offset="0" max-vertical-offset="748">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/select_tag.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="731">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="13" column="59" selection-start-line="12" selection-start-column="3" selection-end-line="13" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AllArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ContentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
+          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/MainArticlesServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ArticleDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.5" vertical-offset="1351" max-vertical-offset="1836">
+          <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/contentHistory.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="352" max-vertical-offset="850">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/content_view.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1923075" vertical-offset="1794" max-vertical-offset="2312">
+          <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/tables/FrontPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/StatusController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20481928" vertical-offset="0" max-vertical-offset="1462">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/daoImpl/FrontPageDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24702774" vertical-offset="0" max-vertical-offset="757">
+          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ContentListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80845445" vertical-offset="0" max-vertical-offset="1309">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/userList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2735978" vertical-offset="344" max-vertical-offset="1513">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/tagsList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2735978" vertical-offset="344" max-vertical-offset="1462">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40766075" vertical-offset="195" max-vertical-offset="952">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/front_page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.73077" vertical-offset="170" max-vertical-offset="1360">
+          <caret line="57" column="84" selection-start-line="57" selection-start-column="84" selection-end-line="57" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/contentList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.346154" vertical-offset="973" max-vertical-offset="1887">
+          <caret line="70" column="32" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/FrontPageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79435486" vertical-offset="310" max-vertical-offset="1054">
+          <caret line="53" column="65" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/FrontPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5255376" vertical-offset="153" max-vertical-offset="1258">
+          <caret line="32" column="58" selection-start-line="31" selection-start-column="7" selection-end-line="32" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/SelectedTagsControllers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15994623" vertical-offset="0" max-vertical-offset="816">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="57" />
           <folding />
         </state>
       </provider>

@@ -34,7 +34,7 @@
 
 <br>
 <div align="left">
-    <form action="/articlelist" method="get">
+    <form action="/article_list" method="get">
         <button class="btn btn-default btn-inverse" style="margin-left: 25px" type="submit">Close</button>
     </form>
 </div>

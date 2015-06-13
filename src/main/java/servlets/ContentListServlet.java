@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/articlelist")
+@WebServlet("/article_list")
 public class ContentListServlet extends ServletProvider{
 
     private static final String pageName = "/contentList.jsp";

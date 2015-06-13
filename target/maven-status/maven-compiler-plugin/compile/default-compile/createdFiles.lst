@@ -19,6 +19,7 @@ servlets\ServletUtil.class
 hibernate\dao\ContentTagLinkerDao.class
 hibernate\dao\UserDao.class
 hibernate\util\HibernateUtil.class
+servlets\FrontPageController.class
 servlets\ImagineServlet.class
 hibernate\tables\FrontPage.class
 hibernate\exception\SavingException.class
@@ -30,7 +31,6 @@ authorization\SendMessage.class
 access\AccessLevel.class
 servlets\SuccessRegistration.class
 hibernate\dao\TagDao.class
-servlets\CheckTagsControllers.class
 servlets\CheckLoginServlet.class
 hibernate\tables\Content.class
 hibernate\daoImpl\UserDaoImpl.class
@@ -52,6 +52,7 @@ servlets\ServletProvider.class
 hibernate\tables\User.class
 context\PaginationBuilder.class
 access\AccessProvider.class
+servlets\FrontPageServlet.class
 hibernate\dao\ContentDao.class
 controllers\ImageController.class
 servlets\TagController.class
@@ -69,6 +70,7 @@ controllers\ArticleController.class
 authorization\SendMessage$SMTPAuthenticator.class
 hibernate\tables\userInfo\UserStatus.class
 controllers\TagSearchController.class
+servlets\SelectedTagsControllers.class
 servlets\Registration.class
 context\ContentSession.class
 hibernate\daoImpl\ContentPositionHistoryDaoImpl.class

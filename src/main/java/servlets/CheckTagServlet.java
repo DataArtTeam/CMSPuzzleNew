@@ -14,10 +14,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/checktag")
+@WebServlet("/select_tag")
 public class CheckTagServlet extends ServletProvider{
 
-    private static final String pageName = "/checkTag.jsp";
+    private static final String pageName = "/select_tag.jsp";
     private static final String CONTENT_TYPE = "text/html";
     private static final String KEY_TAG_LIST = "tagList";
 
