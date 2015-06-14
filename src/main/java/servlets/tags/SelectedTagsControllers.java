@@ -5,15 +5,14 @@ import context.ContentSession;
 import context.UserSession;
 import controllers.TagListSingleton;
 import hibernate.dao.ContentDao;
+import hibernate.dao.ContentPositionHistoryDao;
 import hibernate.dao.ContentTagLinkerDao;
 import hibernate.dao.TagDao;
 import hibernate.daoImpl.ContentDaoImpl;
+import hibernate.daoImpl.ContentPositionHistoryDaoImpl;
 import hibernate.daoImpl.ContentTagLinkerDaoImpl;
 import hibernate.daoImpl.TagDaoImpl;
-import hibernate.tables.Content;
-import hibernate.tables.ContentTagLinker;
-import hibernate.tables.Tag;
-import hibernate.tables.User;
+import hibernate.tables.*;
 import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
@@ -69,15 +68,15 @@ public class SelectedTagsControllers extends ServletProvider {
 
     private void createArticle(){
         ContentSession contentSession = ContentSession.getContentSession();
-        TagListSingleton tagListSingleton = TagListSingleton.getTagList();
         Timestamp timestamp = new Timestamp(Calendar.getInstance().getTimeInMillis());
         User user = UserSession.getUserSession().getUser();
-        content = new Content(contentSession.name, contentSession.title, tagListSingleton.tags, contentSession.image,
+        content = new Content(contentSession.name, contentSession.title, contentSession.image,
                 contentSession.description, contentSession.text, timestamp, contentSession.link, ArticleStatus.AUTHOR, user);
 
         ContentDao contentDao = new ContentDaoImpl();
         try {
             contentDao.addContent(content);
+            addToHistory();
         }
         catch (SQLException e){
 
@@ -99,5 +98,19 @@ public class SelectedTagsControllers extends ServletProvider {
 
         }
 
+    }
+
+    private void addToHistory(){
+        User user = UserSession.getUserSession().getUser();
+        Timestamp date = new Timestamp(Calendar.getInstance().getTimeInMillis());
+        ContentPositionHistory contentPositionHistory = new ContentPositionHistory(content, user, ArticleStatus.AUTHOR, date);
+
+        try {
+            ContentPositionHistoryDao contentPosition = new ContentPositionHistoryDaoImpl();
+            contentPosition.addContentPositionHistory(contentPositionHistory);
+        }
+        catch (SQLException e){
+
+        }
     }
 }

@@ -12,6 +12,7 @@ D:\CMS\puzzle\src\main\java\hibernate\tables\FrontPage.java
 D:\CMS\puzzle\src\main\java\hibernate\exception\SavingException.java
 D:\CMS\puzzle\src\main\java\hibernate\tables\userInfo\UserStatus.java
 D:\CMS\puzzle\src\main\java\context\ListTags.java
+D:\CMS\puzzle\src\main\java\servlets\authorisation\LogoutServlet.java
 D:\CMS\puzzle\src\main\java\servlets\content\ValidateArticle.java
 D:\CMS\puzzle\src\main\java\hibernate\daoImpl\ContentTagLinkerDaoImpl.java
 D:\CMS\puzzle\src\main\java\servlets\tags\ChoosingTagServlet.java
@@ -20,8 +21,8 @@ D:\CMS\puzzle\src\main\java\hibernate\dao\ContentTagLinkerDao.java
 D:\CMS\puzzle\src\main\java\hibernate\daoImpl\FrontPageDaoImpl.java
 D:\CMS\puzzle\src\main\java\context\ContentSession.java
 D:\CMS\puzzle\src\main\java\controllers\TagsController.java
-D:\CMS\puzzle\src\main\java\context\UsersList.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\FrontPageDao.java
+D:\CMS\puzzle\src\main\java\context\UsersList.java
 D:\CMS\puzzle\src\main\java\servlets\tags\SelectedTagsControllers.java
 D:\CMS\puzzle\src\main\java\servlets\tags\TagController.java
 D:\CMS\puzzle\src\main\java\servlets\content\ArticleDetails.java

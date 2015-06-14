@@ -30,6 +30,7 @@ servlets\authorisation\CommitUserServlet.class
 servlets\frontpage\FrontPageRemoverServlet.class
 hibernate\general\HibernateFactory.class
 servlets\authorisation\Login.class
+servlets\authorisation\LogoutServlet.class
 authorization\SendMessage.class
 servlets\authorisation\SuccessRestore.class
 access\AccessLevel.class

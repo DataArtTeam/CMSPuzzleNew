@@ -96,4 +96,7 @@ public class UserSession implements ContextObject {
 
         return user;
     }
+    public void removeUser(){
+        userSessionInst = null;
+    }
 }

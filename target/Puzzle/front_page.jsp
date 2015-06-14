@@ -31,6 +31,7 @@
         <li><a href="/userlist">Users</a></li>
         <li><a href="/front">Front page</a></li>
         <li><a href="/tags">Tags</a></li>
+        <li><a href="/logout">Logout</a></li>
     </ul>
 </nav>
 <div class="site-overlay"></div>

@@ -62,8 +62,6 @@ public class Content implements Serializable, hibernate.tables.Table {
     @Column (columnDefinition="enum('AUTHOR','CORRECTOR', 'EDITOR', 'DELETED', 'WEBSITE')", name="articleStatus")
     private ArticleStatus articleStatus;
 
-    private Byte status;
-
     @Column(name = "c_created")
     private Timestamp created;
 
@@ -73,17 +71,12 @@ public class Content implements Serializable, hibernate.tables.Table {
     @Column(name = "c_url")
     private String url;
 
-    @ManyToOne								// (targetEntity = User.class)
-    @JoinColumn(name = "c_author")			//field name in table
+    @ManyToOne
+    @JoinColumn(name = "c_author")
     private User author;
 
     @OneToMany(mappedBy = "content") 		// reference on field in object ContentTagLinker
     private Set<ContentTagLinker> contents;
-
-    @OneToMany(mappedBy = "contentId")		// reference on field in object FrontPage
-    private Set<FrontPage> frontPages;
-
-    private ArrayList<Tag> tags;
 
     private String descr;
 
@@ -93,22 +86,17 @@ public class Content implements Serializable, hibernate.tables.Table {
     public Content(){
 
     }
-    public Content(String name, String title, ArrayList<Tag> tags, String image, String descriptionOfContent,
+    public Content(String name, String title, String image, String descriptionOfContent,
                    String text, Timestamp created, String url, ArticleStatus articleStatus, User author){
         this.name = name;
         this.title = title;
-        this.keywordsOfTags = keywordsOfTags;
-        //this.descriptionOfTags = descriptionOfTags;
         this.descriptionOfContent = descriptionOfContent;
         this.image = image;
         this.text = text;
-        //this.status = status;
         this.created = created;
-        //this.lastEdit = lastEdit;
         this.url = url;
         this.articleStatus = articleStatus;
         this.author = author;
-       // this.tags = tags;
     }
 
 
@@ -177,14 +165,6 @@ public class Content implements Serializable, hibernate.tables.Table {
         this.text = text;
     }
 
-    public Byte getStatus() {
-        return status;
-    }
-
-    public void setStatus(Byte status) {
-        this.status = status;
-    }
-
     public Timestamp getCreated() {
         return created;
     }
@@ -221,10 +201,6 @@ public class Content implements Serializable, hibernate.tables.Table {
         return contents;
     }
 
-    public Set<FrontPage> getFrontPages() {
-        return frontPages;
-    }
-
     public Integer getReviewCount() {
         return reviewCount;
     }
@@ -250,7 +226,7 @@ public class Content implements Serializable, hibernate.tables.Table {
                 .append(", image=").append(image)
                 .append(", descriptionOfContent=").append(descriptionOfContent)
                 .append(", text=").append(text)
-                .append(", status=").append(status)
+                .append(", status=").append(articleStatus)
                 .append(", created=").append(created)
                 .append(", lastEdit=").append(lastEdit)
                 .append(", url=").append(url)
@@ -270,7 +246,7 @@ public class Content implements Serializable, hibernate.tables.Table {
             articleData.put(KEY_URL,           url);
             articleData.put(KEY_IMG,           image);
             //articleData.put(KEY_REVIEW,        review);
-            articleData.put(KEY_TAGS,          getTagsName());
+            //articleData.put(KEY_TAGS,          getTagsName());
             articleData.put(KEY_AUTHOR,        author.getFirstName());
             articleData.put(KEY_TEXT,          text);
             articleData.put(KEY_TITLE,         title);
@@ -287,16 +263,16 @@ public class Content implements Serializable, hibernate.tables.Table {
 
     }
 
-    private ArrayList<JSONObject> getTagsName(){
-
-        ArrayList<JSONObject> tagsName = new ArrayList<JSONObject>();
-
-        for (Tag tag: tags){
-            tagsName.add(tag.getTagInJSON());
-        }
-
-        return tagsName;
-    }
+//    private ArrayList<JSONObject> getTagsName(){
+//
+//        ArrayList<JSONObject> tagsName = new ArrayList<JSONObject>();
+//
+//        for (Tag tag: tags){
+//            tagsName.add(tag.getTagInJSON());
+//        }
+//
+//        return tagsName;
+//    }
 
     private ArrayList<Content> getSimilarContext(){
         return null;
@@ -347,7 +323,7 @@ public class Content implements Serializable, hibernate.tables.Table {
             articleData.put(KEY_URL,           url);
             articleData.put(KEY_IMG,           image);
            // articleData.put(KEY_REVIEW,        review);
-            articleData.put(KEY_TAGS,          getTagsName());
+           // articleData.put(KEY_TAGS,          getTagsName());
             articleData.put(KEY_AUTHOR,        author.createFullJSON());
 
             return articleData;
@@ -382,7 +358,7 @@ public class Content implements Serializable, hibernate.tables.Table {
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result
                 + ((reviewCount == null) ? 0 : reviewCount.hashCode());
-        result = prime * result + ((status == null) ? 0 : status.hashCode());
+        result = prime * result + ((articleStatus == null) ? 0 : articleStatus.hashCode());
         result = prime * result + ((text == null) ? 0 : text.hashCode());
         result = prime * result + ((title == null) ? 0 : title.hashCode());
         result = prime * result + ((url == null) ? 0 : url.hashCode());
@@ -448,10 +424,10 @@ public class Content implements Serializable, hibernate.tables.Table {
                 return false;
         } else if (!reviewCount.equals(other.reviewCount))
             return false;
-        if (status == null) {
-            if (other.status != null)
+        if (articleStatus == null) {
+            if (other.articleStatus != null)
                 return false;
-        } else if (!status.equals(other.status))
+        } else if (!articleStatus.equals(other.articleStatus))
             return false;
         if (text == null) {
             if (other.text != null)
