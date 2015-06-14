@@ -5,20 +5,20 @@ public class ContentSession {
 
     private static ContentSession contentSession;
 
-    String text;
-    String name;
-    String title;
-    String description;
-    String keywords;
-    String link;
-    String image;
+    public String text;
+    public   String name;
+    public String title;
+    public String description;
+    public String keywords;
+    public String link;
+    public String image;
 
     private ContentSession(){
 
     }
 
     public static synchronized ContentSession getContentSession(){
-        if(contentSession != null) {
+        if(contentSession == null) {
             contentSession = new ContentSession();
         }
 
@@ -26,7 +26,7 @@ public class ContentSession {
     }
 
     public void createContentSession(String name, String title,  String text, String description,
-                                      String keywords, String link, String image){
+                                     String keywords, String link, String image){
         this.name = name;
         this.title = title;
         this.text = text;

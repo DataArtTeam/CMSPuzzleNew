@@ -44,45 +44,42 @@
     document.body.appendChild(el.cloneNode(true));
 </script>
 
+<form action="/add_content">
+    <div id="content_add_article">
+        <div class="container">
+            <div class="row-fluid">
 
-<div id="content_add_article">
-    <div class="container">
-        <div class="row-fluid">
-            <form action="/add_content">
-                <div class="span4"><h2 class="form-signin-heading" style="color: dimgray">New article</h2>
-
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>Name <input type="text"  name="name" class="input-block-level"></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th>Title <input type="text"  name="title" class="input-block-level"></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th>Keywords <input type="text" class="input-block-level" name="kwds" ></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th>Description <input type="text" class="input-block-level" name="description"></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th>Reference <input type="text" name="link" class="input-block-level"></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th>Image name <input type="text" name="imageName" class="input-block-level"></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th>Tags <input type="text" name="tags" title="Tags" class="input-block-level" value="<%out.print(TagListSingleton.getTagList().getTagsInString());%>"></th>
-                        </tr>
-                    </table>
-                </div>
-            </form>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Name <input type="text"  name="name" class="input-block-level"></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Title <input type="text"  name="title" class="input-block-level"></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Keywords <input type="text" class="input-block-level" name="kwds" ></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Description <input type="text" class="input-block-level" name="description"></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Reference <input type="text" name="link" class="input-block-level"></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Image name <input type="text" name="imageName" class="input-block-level"></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Tags <input type="text" name="tags" title="Tags" class="input-block-level" value="<%out.print(TagListSingleton.getTagList().getTagsInString());%>"></th>
+                    </tr>
+                </table>
+            </div>
             <div align="center">
                 <BR>
             </div>
@@ -100,12 +97,14 @@
                                      editor="editor1" value="<%= value %>"/>
                 </p>
             </div>
-            <br>
-            <button class="btn btn-default btn-inverse" style="margin-left: 25px" type="submit">Next</button>
-            <br>
+
         </div>
     </div>
-</div>
+    </div>
+    <br>
+    <button class="btn btn-default btn-inverse" style="margin-left: 25px" type="submit">Next</button>
+    <br>
+</form>
 <br>
 <div align="left">
     <form action="/article_list" method="get">

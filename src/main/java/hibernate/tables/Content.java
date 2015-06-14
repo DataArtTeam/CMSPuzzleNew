@@ -87,8 +87,8 @@ public class Content implements Serializable, hibernate.tables.Table {
 
     private String descr;
 
-//	@OneToMany(mappedBy = "content") 		// reference on field in object ContentPosition
-//	private Set<ContentTagLinker> contents;
+    @Column(name = "c_review_count")
+    private Integer reviewCount;
 
     public Content(){
 
@@ -108,11 +108,10 @@ public class Content implements Serializable, hibernate.tables.Table {
         this.url = url;
         this.articleStatus = articleStatus;
         this.author = author;
-        this.tags = tags;
+       // this.tags = tags;
     }
 
-    @Column(name = "c_review_count")
-    private Integer reviewCount;
+
 
     public Integer getId() {
         return id;

@@ -52,6 +52,14 @@ public class ContentTagLinker implements Serializable, hibernate.tables.Table{
 		this.tag = tag;
 	}
 
+    public ContentTagLinker(){
+
+    }
+
+    public ContentTagLinker(Content content, Tag tag){
+        this.content = content;
+        this.tag = tag;
+    }
 	
 	@Override
 	public String toString() {
