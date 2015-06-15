@@ -212,7 +212,7 @@ public class User implements Serializable, hibernate.tables.Table{
 		return true;
 	}
 
-    public JSONObject createFullJSON() {
+    public JSONObject createJSON() {
         try {
             JSONObject userJSON = new JSONObject();
             userJSON.put(KEY_NAME, login);
@@ -224,6 +224,11 @@ public class User implements Serializable, hibernate.tables.Table{
             return null;
 
         }
+    }
+
+    public String getUserInJSON(){
+        JSONObject userJSON = createJSON();
+        return userJSON.toString();
     }
 
 }

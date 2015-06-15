@@ -1,6 +1,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="hibernate.tables.Content" %>
 <%@ page import="context.ContentList" %>
+<%@ page import="context.ContentSession" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -43,6 +44,7 @@
 </div>
 
 <div class="container" style="width: 300px;">
+    <%ContentSession.getContentSession().removeInstance();%>
     <form action="content_view.jsp" method="post">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Add new</button>
     </form>

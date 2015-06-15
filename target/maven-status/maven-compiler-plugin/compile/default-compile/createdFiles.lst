@@ -1,5 +1,6 @@
 hibernate\exception\DeletingException.class
 servlets\tags\SelectedTagsControllers.class
+access\providers\ContentListProvider.class
 servlets\images\ImagineServlet.class
 servlets\authorisation\UserListServlet.class
 hibernate\tables\Table.class
@@ -40,6 +41,7 @@ hibernate\dao\TagDao.class
 servlets\frontpage\FrontPageServlet.class
 hibernate\tables\Content.class
 hibernate\daoImpl\UserDaoImpl.class
+access\providers\TagProvider.class
 hibernate\tables\userInfo\UserRole.class
 controllers\TagListSingleton.class
 hibernate\daoImpl\TagDaoImpl.class
@@ -62,6 +64,7 @@ controllers\ImageController.class
 hibernate\daoImpl\ContentTagLinkerDaoImpl.class
 hibernate\tables\Tag.class
 controllers\MainPageController.class
+access\providers\FrontPageProvider.class
 controllers\TagsController.class
 hibernate\daoImpl\ContentDaoImpl.class
 hibernate\dao\ContentPositionHistoryDao.class

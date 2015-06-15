@@ -23,7 +23,6 @@ public class ArticleController {
     public @ResponseBody
     String getArticleDetails(@PathVariable String url) {
 
-        ArrayList<Content> contents = new ArrayList<>();
         getContent(url);
         String contentJSON = content.getStringJSON(0);
         if(contentJSON != null){

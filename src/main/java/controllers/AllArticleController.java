@@ -1,5 +1,6 @@
 package controllers;
 
+import access.providers.ContentListProvider;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,11 +14,8 @@ public class AllArticleController {
     @RequestMapping(value = "{pageNumber}", method = RequestMethod.GET)
     public @ResponseBody
     String getAllArticlesDetails(@PathVariable int pageNumber) {
-//
-//        ArticleList articleList = ArticleList.getArticleList();
-//        String articleJSON = articleList.getArticlesInString();
-//
-//        return articleJSON;
-            return "";
+        ContentListProvider contentListProvider = new ContentListProvider();
+        String contentsInString = contentListProvider.getContentsByNumber(pageNumber);
+        return contentsInString;
     }
 }

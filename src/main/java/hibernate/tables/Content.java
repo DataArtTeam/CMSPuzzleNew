@@ -1,5 +1,6 @@
 package hibernate.tables;
 
+import access.providers.TagProvider;
 import context.ArticleStatus;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,6 +32,7 @@ public class Content implements Serializable, hibernate.tables.Table {
     private static final String KEY_IMG             = "img";
     private static final String KEY_KWDS            = "kwds";
     private static final String KEY_SIMILAR         = "similar";
+    private static final String IMAGE_STORE         = "http://localhost:8080/rest/website/imagine/";
 
     @Id
     @Column(name = "c_id")
@@ -251,17 +253,20 @@ public class Content implements Serializable, hibernate.tables.Table {
 
     public JSONObject createFullJSON() {
 
+
+
         try {
             JSONObject articleData = new JSONObject();
             articleData.put(KEY_ID,            id);
             articleData.put(KEY_NAME,          name);
+            articleData.put(KEY_IMG,           getImagePath());
             articleData.put(KEY_DESCRIPTION,   descriptionOfContent);
+            articleData.put(KEY_DESCR,         descriptionOfContent);
             articleData.put(KEY_CREATED,       created);
             articleData.put(KEY_URL,           url);
-            articleData.put(KEY_IMG,           image);
-            //articleData.put(KEY_REVIEW,        review);
-            //articleData.put(KEY_TAGS,          getTagsName());
-            articleData.put(KEY_AUTHOR,        author.getFirstName());
+            articleData.put(KEY_REVIEW,        reviewCount);
+            articleData.put(KEY_TAGS,          getTagsInString());
+            articleData.put(KEY_AUTHOR,        author.createJSON());
             articleData.put(KEY_TEXT,          text);
             articleData.put(KEY_TITLE,         title);
             articleData.put(KEY_KWDS,          keywordsOfTags);
@@ -277,16 +282,19 @@ public class Content implements Serializable, hibernate.tables.Table {
 
     }
 
-//    private ArrayList<JSONObject> getTagsName(){
-//
-//        ArrayList<JSONObject> tagsName = new ArrayList<JSONObject>();
-//
-//        for (Tag tag: tags){
-//            tagsName.add(tag.getTagInJSON());
-//        }
-//
-//        return tagsName;
-//    }
+    private String getImagePath(){
+        StringBuffer imagePath = new StringBuffer();
+        imagePath.append(IMAGE_STORE);
+        imagePath.append(image);
+        return imagePath.toString();
+    }
+
+    private String getTagsInString(){
+        TagProvider tagProvider = new TagProvider();
+        String tags = tagProvider.getContentTagInJSON(this);
+
+        return tags;
+    }
 
     private ArrayList<Content> getSimilarContext(){
         return null;
@@ -336,9 +344,9 @@ public class Content implements Serializable, hibernate.tables.Table {
             articleData.put(KEY_CREATED,       created);
             articleData.put(KEY_URL,           url);
             articleData.put(KEY_IMG,           image);
-           // articleData.put(KEY_REVIEW,        review);
-           // articleData.put(KEY_TAGS,          getTagsName());
-            articleData.put(KEY_AUTHOR,        author.createFullJSON());
+            articleData.put(KEY_REVIEW,        reviewCount);
+            articleData.put(KEY_TAGS,          getTagsInString());
+            articleData.put(KEY_AUTHOR,        author.createJSON());
 
             return articleData;
         }

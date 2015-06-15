@@ -1,5 +1,6 @@
 D:\CMS\puzzle\src\main\java\hibernate\daoImpl\UserDaoImpl.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\TagDao.java
+D:\CMS\puzzle\src\main\java\access\providers\TagProvider.java
 D:\CMS\puzzle\src\main\java\controllers\TagSearchController.java
 D:\CMS\puzzle\src\main\java\servlets\tags\NewTagController.java
 D:\CMS\puzzle\src\main\java\servlets\MainController.java
@@ -39,13 +40,14 @@ D:\CMS\puzzle\src\main\java\servlets\authorisation\CheckLoginServlet.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\UserDao.java
 D:\CMS\puzzle\src\main\java\hibernate\exception\CMSPuzzleHibernateException.java
 D:\CMS\puzzle\src\main\java\authorization\PasswordHash.java
+D:\CMS\puzzle\src\main\java\access\providers\ContentListProvider.java
 D:\CMS\puzzle\src\main\java\servlets\frontpage\FrontPageController.java
 D:\CMS\puzzle\src\main\java\servlets\authorisation\ServletUtil.java
 D:\CMS\puzzle\src\main\java\controllers\MainPageController.java
 D:\CMS\puzzle\src\main\java\access\AccessLevel.java
 D:\CMS\puzzle\src\main\java\controllers\AllArticleController.java
-D:\CMS\puzzle\src\main\java\hibernate\tables\Content.java
 D:\CMS\puzzle\src\main\java\context\ArticleStatus.java
+D:\CMS\puzzle\src\main\java\hibernate\tables\Content.java
 D:\CMS\puzzle\src\main\java\authorization\EmailValidate.java
 D:\CMS\puzzle\src\main\java\controllers\TagListSingleton.java
 D:\CMS\puzzle\src\main\java\servlets\authorisation\Login.java
@@ -75,6 +77,7 @@ D:\CMS\puzzle\src\main\java\hibernate\daoImpl\ContentPositionHistoryDaoImpl.java
 D:\CMS\puzzle\src\main\java\hibernate\tables\Tag.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\ContentPositionHistoryDao.java
 D:\CMS\puzzle\src\main\java\controllers\ImageController.java
+D:\CMS\puzzle\src\main\java\access\providers\FrontPageProvider.java
 D:\CMS\puzzle\src\main\java\servlets\frontpage\FrontPageServlet.java
 D:\CMS\puzzle\src\main\java\servlets\images\ImagineServlet.java
 D:\CMS\puzzle\src\main\java\hibernate\exception\DeletingException.java

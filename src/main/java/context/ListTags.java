@@ -15,6 +15,19 @@ public class ListTags {
 
     private static final String KEY_TAGS = "tags";
 
+    public String getTagByID(Integer id){
+        TagDao tagDao = new TagDaoImpl();
+        try {
+            Tag tag = tagDao.getTag(id);
+        }
+
+        catch (SQLException e){
+
+        }
+
+        return "";
+    }
+
     public String getTagsInString(){
 
         ArrayList<Tag> tags = getAllTags();
@@ -24,7 +37,6 @@ public class ListTags {
         int listSize = tags.size();
         int amount = 1;
         for (Tag tag: tags){
-            //tagsInJSON.add(tag.getTagInJSON());
             stringBuffer.append(tag.getTagInJSON());
             if (amount < listSize){
                 stringBuffer.append(",");
@@ -34,15 +46,6 @@ public class ListTags {
         }
         stringBuffer.append("]");
         return stringBuffer.toString();
-
-//        try {
-//            JSONObject listTagsJSON = new JSONObject();
-//            listTagsJSON.put(KEY_TAGS, tagsInJSON);
-//            return listTagsJSON.toString();
-//        }
-//        catch (JSONException e){
-//            return null;
-//        }
 
     }
 
