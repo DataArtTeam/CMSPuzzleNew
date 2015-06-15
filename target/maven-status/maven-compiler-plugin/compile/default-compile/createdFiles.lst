@@ -27,6 +27,7 @@ servlets\authorisation\CheckLoginServlet$Registration.class
 servlets\status\StatusController.class
 hibernate\tables\FrontPage.class
 hibernate\exception\SavingException.class
+servlets\content\ContentDetailsServlet.class
 servlets\authorisation\CommitUserServlet.class
 servlets\frontpage\FrontPageRemoverServlet.class
 hibernate\general\HibernateFactory.class
@@ -75,6 +76,7 @@ servlets\content\ContentServlet.class
 context\ContentSession.class
 servlets\authorisation\RestorePassword.class
 servlets\tags\TagController.class
+context\ContentEditMode.class
 servlets\content\ArticleDetails.class
 hibernate\daoImpl\ContentPositionHistoryDaoImpl.class
 servlets\tags\NewTagController.class

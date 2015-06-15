@@ -1,8 +1,11 @@
 package servlets.tags;
 
 import controllers.TagListSingleton;
+import hibernate.dao.ContentTagLinkerDao;
 import hibernate.dao.TagDao;
+import hibernate.daoImpl.ContentTagLinkerDaoImpl;
 import hibernate.daoImpl.TagDaoImpl;
+import hibernate.tables.ContentTagLinker;
 import hibernate.tables.Tag;
 import servlets.ServletProvider;
 
@@ -13,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/remove_tag")
 public class TagRemoverServlet extends ServletProvider{
@@ -44,7 +48,10 @@ public class TagRemoverServlet extends ServletProvider{
             Integer intId = new Integer(id);
             try {
                 Tag tag = tagDao.getTag(intId);
-                tagList.add(tag);
+                boolean linkExists = getLinksForTag(tag);
+                if(linkExists == false){
+                    tagList.add(tag);
+                }
             }
             catch (SQLException e){
 
@@ -62,6 +69,22 @@ public class TagRemoverServlet extends ServletProvider{
         }
         catch (SQLException e){
 
+        }
+    }
+
+    private boolean getLinksForTag(Tag tag){
+        ContentTagLinkerDao contentTagLinkerDao = new ContentTagLinkerDaoImpl();
+        try {
+            List<ContentTagLinker> tagsLink = contentTagLinkerDao.getContentTagLinkersByProperty("tag", tag);
+            if(tagsLink.size() > 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        catch (SQLException e){
+            return false;
         }
     }
 

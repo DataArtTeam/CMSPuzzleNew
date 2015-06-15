@@ -74,9 +74,10 @@
 
             <tr>
                 <%String statusRef = "/editstatus?id="+ content.getId();
-                    String historyRef = "/contenthistory?contentId=" + content.getId();%>
+                    String historyRef = "/contenthistory?contentId=" + content.getId();
+                    String contentDetails = "/content_details?id=" + content.getId();%>
                 <th><input type="checkbox" name="contentList" value=<%out.print(content.getId());%> ></th>
-                <th><a href= <%out.print(content.getUrl());%>><%out.print(content.getTitle());%></a></th>
+                <th><a href= <%out.print(contentDetails);%>><%out.print(content.getTitle());%></a></th>
                 <th><% out.print(content.getDescriptionOfContent());%></th>
                 <th><% out.print(content.getAuthor().getLogin());%></th>
                 <th><a href=<%out.print(historyRef);%>> show history</a></th>

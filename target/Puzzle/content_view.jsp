@@ -5,6 +5,7 @@
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.Map"%>
 <%@ page import="controllers.TagListSingleton" %>
+<%@ page import="context.ContentSession" %>
 <%@page language="Java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="en">
@@ -44,6 +45,8 @@
     document.body.appendChild(el.cloneNode(true));
 </script>
 
+<%ContentSession contentSession = ContentSession.getContentSession();%>
+
 <form action="/add_content">
     <div id="content_add_article">
         <div class="container">
@@ -52,31 +55,27 @@
                 <table>
                     <tr>
                         <th></th>
-                        <th>Name <input type="text"  name="name" class="input-block-level"></th>
+                        <th>Name <input type="text"  name="name" class="input-block-level" value="<%out.print(contentSession.name != null ?contentSession.name: "");%>"></th>
                     </tr>
                     <tr>
                         <th></th>
-                        <th>Title <input type="text"  name="title" class="input-block-level"></th>
+                        <th>Title <input type="text"  name="title" class="input-block-level" value="<%out.print(contentSession.title != null ?contentSession.title: "");%>"></th>
                     </tr>
                     <tr>
                         <th></th>
-                        <th>Keywords <input type="text" class="input-block-level" name="kwds" ></th>
+                        <th>Keywords <input type="text" class="input-block-level" name="kwds" value="<%out.print(contentSession.keywords != null ?contentSession.keywords: "");%>"></th>
                     </tr>
                     <tr>
                         <th></th>
-                        <th>Description <input type="text" class="input-block-level" name="description"></th>
+                        <th>Description <input type="text" class="input-block-level" name="description" value="<%out.print(contentSession.description != null ?contentSession.description: "");%>"></th>
                     </tr>
                     <tr>
                         <th></th>
-                        <th>Reference <input type="text" name="link" class="input-block-level"></th>
+                        <th>Reference <input type="text" name="link" class="input-block-level" value="<%out.print(contentSession.link != null ?contentSession.link: "");%>"></th>
                     </tr>
                     <tr>
                         <th></th>
-                        <th>Image name <input type="text" name="imageName" class="input-block-level"></th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th>Tags <input type="text" name="tags" title="Tags" class="input-block-level" value="<%out.print(TagListSingleton.getTagList().getTagsInString());%>"></th>
+                        <th>Image name <input type="text" name="imageName" class="input-block-level" value="<%out.print(contentSession.image != null ?contentSession.image: "");%>"></th>
                     </tr>
                 </table>
             </div>
@@ -87,7 +86,13 @@
             <div align="center">
                 <p>
                     <%
-                        String value = "Type here...";
+                        String value;
+                        if (contentSession.text != null){
+                            value = contentSession.text;
+                        }
+                        else {
+                            value = "Type here...";
+                        }
                         Map<String, String> attr = new HashMap<String, String>();
                         CKEditorConfig settings = new CKEditorConfig();
                         settings.addConfigValue("toolbar", "Full");

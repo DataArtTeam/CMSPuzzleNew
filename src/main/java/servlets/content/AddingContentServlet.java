@@ -1,6 +1,8 @@
 package servlets.content;
 
+import context.ContentEditMode;
 import context.ContentSession;
+import hibernate.tables.Tag;
 import servlets.ServletProvider;
 
 import javax.servlet.ServletException;
@@ -8,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @WebServlet("/add_content")
 public class AddingContentServlet extends ServletProvider {
@@ -30,11 +33,21 @@ public class AddingContentServlet extends ServletProvider {
     private String keywords;
     private String link;
     private String imageName;
+    ContentSession contentSession;
+    ArrayList<Tag> tags;
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         getParameters(request);
-        createContent();
+        contentSession = ContentSession.getContentSession();
+        if(contentSession.editMode == ContentEditMode.EDIT_MODE) {
+            updateContent();
+            //getTags();
+        }
+        else {
+            createContent();
+        }
+
 
         response.setContentType(CONTENT_TYPE);
         super.forwardRequest(request, response, pageName);
@@ -42,8 +55,11 @@ public class AddingContentServlet extends ServletProvider {
     }
 
     private void createContent(){
-        ContentSession contentSession = ContentSession.getContentSession();
-        contentSession.createContentSession(name, title, text, description, keywords, link, imageName);
+        contentSession.createContentSession(0, name, title, text, description, keywords, link, imageName, ContentEditMode.CREATE_MODE);
+    }
+
+    private void updateContent(){
+        contentSession.updateSession(name, title, text, description, keywords, link, imageName);
     }
 
     private void getParameters(HttpServletRequest request){

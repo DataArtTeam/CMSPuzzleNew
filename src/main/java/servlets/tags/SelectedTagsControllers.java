@@ -1,6 +1,7 @@
 package servlets.tags;
 
 import context.ArticleStatus;
+import context.ContentEditMode;
 import context.ContentSession;
 import context.UserSession;
 import controllers.TagListSingleton;
@@ -70,16 +71,28 @@ public class SelectedTagsControllers extends ServletProvider {
         ContentSession contentSession = ContentSession.getContentSession();
         Timestamp timestamp = new Timestamp(Calendar.getInstance().getTimeInMillis());
         User user = UserSession.getUserSession().getUser();
-        content = new Content(contentSession.name, contentSession.title, contentSession.image,
-                contentSession.description, contentSession.text, timestamp, contentSession.link, ArticleStatus.AUTHOR, user);
+
 
         ContentDao contentDao = new ContentDaoImpl();
         try {
-            contentDao.addContent(content);
-            addToHistory();
+            if(contentSession.editMode == ContentEditMode.CREATE_MODE){
+                content = new Content(contentSession.name, contentSession.title, contentSession.image,
+                        contentSession.description, contentSession.text, timestamp, contentSession.link, ArticleStatus.AUTHOR, user);
+                contentDao.addContent(content);
+                addToHistory();
+            }
+            else {
+                content = new Content(contentSession.id, contentSession.name, contentSession.title, contentSession.image,
+                        contentSession.description, contentSession.text, timestamp, contentSession.link, ArticleStatus.AUTHOR, user);
+                contentDao.updateContent(content);
+            }
+
         }
         catch (SQLException e){
 
+        }
+        finally {
+            ContentSession.getContentSession().removeInstance();
         }
 
     }

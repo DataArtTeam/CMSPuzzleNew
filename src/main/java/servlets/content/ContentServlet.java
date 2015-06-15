@@ -55,7 +55,6 @@ public class ContentServlet extends ServletProvider {
         getParameters(request);
         User user = getUser();
         Timestamp timestamp = new Timestamp(Calendar.getInstance().getTimeInMillis());
-        ArrayList<Tag> tags = TagListSingleton.getTagList().getTags();
         Content content = new Content(name, title, imageName, description,
                 text, timestamp, link, ArticleStatus.AUTHOR, user);
 

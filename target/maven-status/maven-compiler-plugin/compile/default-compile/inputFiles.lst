@@ -59,7 +59,9 @@ D:\CMS\puzzle\src\main\java\hibernate\exception\GettingException.java
 D:\CMS\puzzle\src\main\java\servlets\content\MainArticlesServlet.java
 D:\CMS\puzzle\src\main\java\servlets\status\ContentStatusServlet.java
 D:\CMS\puzzle\src\main\java\authorization\SendMessage.java
+D:\CMS\puzzle\src\main\java\servlets\content\ContentDetailsServlet.java
 D:\CMS\puzzle\src\main\java\controllers\ArticleController.java
+D:\CMS\puzzle\src\main\java\context\ContentEditMode.java
 D:\CMS\puzzle\src\main\java\hibernate\util\HibernateDaoBuilder.java
 D:\CMS\puzzle\src\main\java\hibernate\util\HibernateUtil.java
 D:\CMS\puzzle\src\main\java\servlets\authorisation\CommitUserServlet.java

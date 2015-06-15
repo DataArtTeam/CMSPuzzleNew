@@ -99,6 +99,20 @@ public class Content implements Serializable, hibernate.tables.Table {
         this.author = author;
     }
 
+    public Content(Integer id, String name, String title, String image, String descriptionOfContent,
+                   String text, Timestamp created, String url, ArticleStatus articleStatus, User author){
+        this.id = id;
+        this.name = name;
+        this.title = title;
+        this.descriptionOfContent = descriptionOfContent;
+        this.image = image;
+        this.text = text;
+        this.created = created;
+        this.url = url;
+        this.articleStatus = articleStatus;
+        this.author = author;
+    }
+
 
 
     public Integer getId() {
