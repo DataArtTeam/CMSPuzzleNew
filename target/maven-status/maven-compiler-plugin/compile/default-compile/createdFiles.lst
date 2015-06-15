@@ -13,6 +13,7 @@ hibernate\exception\ModifyException.class
 servlets\authorisation\EditUserServlet.class
 context\ContextObject.class
 hibernate\tables\ContentPositionHistory.class
+servlets\tags\TagRemoverServlet.class
 controllers\AllArticleController.class
 servlets\status\ContentHistoryServlet.class
 authorization\EmailValidate.class

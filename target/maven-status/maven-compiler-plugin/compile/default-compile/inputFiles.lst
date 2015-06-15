@@ -24,6 +24,7 @@ D:\CMS\puzzle\src\main\java\controllers\TagsController.java
 D:\CMS\puzzle\src\main\java\hibernate\dao\FrontPageDao.java
 D:\CMS\puzzle\src\main\java\context\UsersList.java
 D:\CMS\puzzle\src\main\java\servlets\tags\SelectedTagsControllers.java
+D:\CMS\puzzle\src\main\java\servlets\tags\TagRemoverServlet.java
 D:\CMS\puzzle\src\main\java\servlets\tags\TagController.java
 D:\CMS\puzzle\src\main\java\servlets\content\ArticleDetails.java
 D:\CMS\puzzle\src\main\java\servlets\authorisation\UserListServlet.java
