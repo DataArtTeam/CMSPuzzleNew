@@ -39,69 +39,76 @@
 <div class="site-overlay"></div>
 <div id="container">
     <div class="menu-btn">&#9776; Menu</div>
+    <div id="content_admin" class="container">
 
-    <h1 style="text-align:center">Articles</h1>
-</div>
+        <div class="span12">
+            <div class="row">
+                <div class="span6">
+                    <input type=button value="Add new" class="btn btn-success">
+                    <input type=button value="Delete" class="btn btn-danger">
+                </div>
+                <div id="search-refresh-bg" class="span6">
+                    <input type="search" placeholder="Search" class="input-medium search-query">
+                    <input type="button" class="btn" value="Search">
+                    <a class="btn" href="#"><i class="icon-refresh"></i></a>
+                </div>
+            </div>
+            <div class="row" style="height: 20px"></div>
+            <div class="row">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Select</th>
+                        <th>Title</th>
+                        <th>Preview</th>
+                        <th>Author</th>
+                        <th>History</th>
+                        <th>Next step</th>
+                        <th>Status</th>
+                    </tr>
+                    <tbody>
 
-<div class="container" style="width: 300px;">
-    <%ContentSession.getContentSession().removeInstance();%>
-    <form action="content_view.jsp" method="post">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Add new</button>
-    </form>
-</div>
+                    <% ArrayList<Content> contentList= (ArrayList) session.getAttribute("contentList");
+                        for(Content content: contentList) {%>
 
-<form action= "/add_to_front" method="get">
+                    <tr>
+                        <%String statusRef = "/editstatus?id="+ content.getId();
+                            String historyRef = "/contenthistory?contentId=" + content.getId();
+                            String contentDetails = "/content_details?id=" + content.getId();%>
+                        <th><input type="checkbox" name="contentList" value=<%out.print(content.getId());%> ></th>
+                        <th><a href= <%out.print(contentDetails);%>><%out.print(content.getTitle());%></a></th>
+                        <th><% out.print(content.getDescriptionOfContent());%></th>
+                        <th><% out.print(content.getAuthor().getLogin());%></th>
+                        <th><a href=<%out.print(historyRef);%>> show history</a></th>
+                        <th><a href=<%out.print(statusRef);%>> finish working with article</a></th>
+                        <th><% out.print(content.getArticleStatus());%></th>
+                    </tr>
 
-    <div class="container" style="width: 300px;">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Add to front page</button>
+                    <%}%>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
     </div>
-
-    <div id="content_page_main_materials" class="container">
-
-        <div class="row" style="height: 20px"></div>
-        <table class="table table-striped">
-            <tr>
-                <th>Select</th>
-                <th>Title</th>
-                <th>Preview</th>
-                <th>Author</th>
-                <th>History</th>
-                <th>Next step</th>
-                <th>Status</th>
-            </tr>
-            <tbody>
-
-            <% ArrayList<Content> contentList= (ArrayList) session.getAttribute("contentList");
-                for(Content content: contentList) {%>
-
-            <tr>
-                <%String statusRef = "/editstatus?id="+ content.getId();
-                    String historyRef = "/contenthistory?contentId=" + content.getId();
-                    String contentDetails = "/content_details?id=" + content.getId();%>
-                <th><input type="checkbox" name="contentList" value=<%out.print(content.getId());%> ></th>
-                <th><a href= <%out.print(contentDetails);%>><%out.print(content.getTitle());%></a></th>
-                <th><% out.print(content.getDescriptionOfContent());%></th>
-                <th><% out.print(content.getAuthor().getLogin());%></th>
-                <th><a href=<%out.print(historyRef);%>> show history</a></th>
-                <th><a href=<%out.print(statusRef);%>> finish working with article</a></th>
-                <th><% out.print(content.getArticleStatus());%></th>
-            </tr>
-
-            <%}%>
-            </tbody>
-        </table>
-    </div>
-</form>
-<%int pageAmount = (Integer) session.getAttribute("pageAmount");
+</div>
+<%
+    int pageAmount = (Integer) session.getAttribute("pageAmount");
     int currentPage = 2;
 %>
 <div class="paginator text-center">
     <ul class="pagination">
         <li><a href="/article_list?page=1">1</a></li>
-        <%while (currentPage <= pageAmount){
-            String ref = "/article_list?page=" + currentPage;%>
+        <%
+            while (currentPage <= pageAmount) {
+                String ref = "/article_list?page=" + currentPage;
+        %>
         <li><a href=<%out.print(ref);%>><%out.print(currentPage);%></a></li>
-        <%currentPage++;}%>
+        <%
+                currentPage++;
+            }
+        %>
     </ul>
 </div>
 <script src="../dist/js/pushy.min.js"></script>
